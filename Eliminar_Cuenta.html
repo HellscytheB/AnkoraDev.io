@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Cuenta - Kollektor App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #FFFFFF;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #311D3F 0%, #522546 25%, #88304E 50%, #E23E57 75%, #FF6B35 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(49, 29, 63, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            color: #FF6B35;
+            text-align: center;
+            border-bottom: 3px solid #FF6B35;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #E23E57;
+            border-left: 4px solid #E23E57;
+            padding-left: 15px;
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
+        h3 {
+            color: #FF6B35;
+            margin-top: 25px;
+            font-size: 1.1rem;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.3), rgba(255, 87, 34, 0.2));
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            backdrop-filter: blur(5px);
+        }
+        .info-box {
+            background: linear-gradient(135deg, rgba(226, 62, 87, 0.2), rgba(255, 107, 53, 0.1));
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        .form-container {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(226, 62, 87, 0.1));
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            color: #FF6B35;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input[type="email"], 
+        input[type="text"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.3);
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 4px;
+            transform: scale(1.2);
+        }
+        .btn {
+            background: linear-gradient(135deg, #E23E57, #FF6B35);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+        .btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #F0F0F0;
+        }
+        p {
+            color: #F0F0F0;
+        }
+        a {
+            color: #FF6B35;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #E23E57;
+            text-decoration: underline;
+        }
+        strong {
+            color: #FF6B35;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-text {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FF6B35, #E23E57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .contact-info {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(226, 62, 87, 0.1));
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(139, 195, 74, 0.2));
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid rgba(76, 175, 80, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">KOLLEKTOR</div>
+        </div>
+        <h1>ELIMINACIÓN DE CUENTA</h1>
+        
+        <div class="warning-box">
+            <h3>⚠️ IMPORTANTE - LEE ANTES DE CONTINUAR</h3>
+            <p><strong>La eliminación de tu cuenta es PERMANENTE e IRREVERSIBLE.</strong></p>
+            <p>Al eliminar tu cuenta se perderán todos tus datos incluyendo clientes, créditos, pagos, carteras y configuraciones.</p>
+        </div>
+
+        <h2>📋 ¿Qué sucede al eliminar tu cuenta?</h2>
+        <div class="info-box">
+            <ul>
+                <li><strong>Datos eliminados permanentemente:</strong>
+                    <ul>
+                        <li>Información de perfil personal</li>
+                        <li>Todos los clientes registrados</li>
+                        <li>Historial completo de créditos y pagos</li>
+                        <li>Carteras y configuraciones</li>
+                        <li>Estadísticas y reportes</li>
+                    </ul>
+                </li>
+                <li><strong>Tiempo de procesamiento:</strong> 7-14 días hábiles</li>
+                <li><strong>Confirmación:</strong> Recibirás un email cuando se complete</li>
+                <li><strong>No hay recuperación:</strong> Una vez eliminada, no se puede restaurar</li>
+            </ul>
+        </div>
+
+        <h2>📥 Alternativas antes de eliminar</h2>
+        <div class="info-box">
+            <p>Considera estas opciones antes de eliminar permanentemente tu cuenta:</p>
+            <ul>
+                <li><strong>🔒 Desactivar temporalmente:</strong> Mantén tus datos pero desactiva la cuenta</li>
+                <li><strong>📤 Exportar datos:</strong> Descarga una copia de tu información</li>
+                <li><strong>🔄 Migrar datos:</strong> Transfiere información a otra cuenta</li>
+                <li><strong>💬 Contactar soporte:</strong> Resolver problemas específicos</li>
+            </ul>
+            <p>Para estas alternativas, contacta a: <a href="mailto:yeisonbetancourthaponte@gmail.com">yeisonbetancourthaponte@gmail.com</a></p>
+        </div>
+
+        <h2>📝 Formulario de Eliminación de Cuenta</h2>
+        <div class="form-container">
+            <form id="deleteAccountForm">
+                <div class="form-group">
+                    <label for="email">Email de la cuenta a eliminar *</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="usuario@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Motivo de eliminación *</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Selecciona un motivo</option>
+                        <option value="no_uso">Ya no uso la aplicación</option>
+                        <option value="problemas_tecnicos">Problemas técnicos persistentes</option>
+                        <option value="privacidad">Preocupaciones de privacidad</option>
+                        <option value="migracion">Migración a otra plataforma</option>
+                        <option value="funcionalidad">Falta de funcionalidades necesarias</option>
+                        <option value="otro">Otro motivo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Detalles adicionales (opcional)</label>
+                    <textarea id="details" name="details" rows="4" 
+                              placeholder="Proporciona más detalles sobre tu motivo o comentarios que puedan ayudarnos a mejorar..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="verification">Código de verificación (opcional)</label>
+                    <input type="text" id="verification" name="verification" 
+                           placeholder="Si tienes un código de soporte, ingrésalo aquí">
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirm1" name="confirm1" required>
+                    <label for="confirm1">
+                        Confirmo que entiendo que esta acción es <strong>PERMANENTE e IRREVERSIBLE</strong>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirm2" name="confirm2" required>
+                    <label for="confirm2">
+                        Confirmo que he considerado las alternativas (exportar datos, desactivar temporalmente, etc.)
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirm3" name="confirm3" required>
+                    <label for="confirm3">
+                        Confirmo que he leído y acepto la <a href="politica_privacidad.html" target="_blank">Política de Privacidad</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn" disabled>
+                    🗑️ ELIMINAR MI CUENTA PERMANENTEMENTE
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <h3>✅ Solicitud Enviada</h3>
+                <p>Tu solicitud de eliminación de cuenta ha sido enviada exitosamente.</p>
+                <p>Recibirás un email de confirmación en <strong>24 horas</strong> con los siguientes pasos.</p>
+                <p>Si cambias de opinión, tienes <strong>48 horas</strong> para cancelar la solicitud.</p>
+            </div>
+        </div>
+
+        <h2>⏱️ Proceso de Eliminación</h2>
+        <div class="info-box">
+            <ol>
+                <li><strong>Envío de solicitud:</strong> Completas este formulario</li>
+                <li><strong>Verificación (24h):</strong> Validamos tu identidad via email</li>
+                <li><strong>Periodo de gracia (48h):</strong> Puedes cancelar la solicitud</li>
+                <li><strong>Procesamiento (7-14 días):</strong> Eliminación completa de datos</li>
+                <li><strong>Confirmación final:</strong> Email cuando se complete el proceso</li>
+            </ol>
+        </div>
+
+        <div class="contact-info">
+            <h3>📞 ¿Necesitas Ayuda?</h3>
+            <p>Si tienes dudas o problemas con el proceso de eliminación:</p>
+            <p>📧 Email: <a href="mailto:yeisonbetancourthaponte@gmail.com">yeisonbetancourthaponte@gmail.com</a></p>
+            <p>📱 WhatsApp: <a href="https://wa.me/573122258970">+57 312 225 8970</a></p>
+            <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM (GMT-5)</p>
+        </div>
+    </div>
+
+    <script>
+        // Validación del formulario
+        const form = document.getElementById('deleteAccountForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const checkboxes = ['confirm1', 'confirm2', 'confirm3'];
+        
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const reason = document.getElementById('reason').value;
+            const allChecked = checkboxes.every(id => document.getElementById(id).checked);
+            
+            submitBtn.disabled = !(email && reason && allChecked);
+        }
+
+        // Agregar listeners a todos los campos
+        document.getElementById('email').addEventListener('input', validateForm);
+        document.getElementById('reason').addEventListener('change', validateForm);
+        checkboxes.forEach(id => {
+            document.getElementById(id).addEventListener('change', validateForm);
+        });
+
+        // Manejar envío del formulario
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Simular envío (en producción, esto sería una llamada a tu API)
+            console.log('Datos de eliminación:', data);
+            
+            // Ocultar formulario y mostrar mensaje de éxito
+            form.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // En producción, aquí harías:
+            // fetch('/api/delete-account', { method: 'POST', body: formData })
+            //   .then(response => response.json())
+            //   .then(data => { /* manejar respuesta */ });
+        });
+    </script>
+</body>
+</html>
