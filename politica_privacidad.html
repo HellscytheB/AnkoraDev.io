@@ -8,81 +8,116 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #FFFFFF;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #311D3F 0%, #522546 25%, #88304E 50%, #E23E57 75%, #FF6B35 100%);
+            min-height: 100vh;
         }
         .container {
-            background: white;
+            background: rgba(49, 29, 63, 0.95);
+            backdrop-filter: blur(10px);
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         h1 {
-            color: #1a73e8;
+            color: #FF6B35;
             text-align: center;
-            border-bottom: 3px solid #1a73e8;
+            border-bottom: 3px solid #FF6B35;
             padding-bottom: 20px;
             margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         h2 {
-            color: #333;
-            border-left: 4px solid #1a73e8;
+            color: #E23E57;
+            border-left: 4px solid #E23E57;
             padding-left: 15px;
             margin-top: 30px;
+            font-size: 1.4rem;
         }
         h3 {
-            color: #666;
+            color: #FF6B35;
             margin-top: 25px;
+            font-size: 1.1rem;
         }
         .app-info {
-            background: #e8f0fe;
+            background: linear-gradient(135deg, rgba(226, 62, 87, 0.2), rgba(255, 107, 53, 0.1));
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             margin-bottom: 30px;
-            border: 1px solid #1a73e8;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
         }
         .contact-info {
-            background: #f1f8e9;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(226, 62, 87, 0.1));
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             margin-top: 30px;
-            border: 1px solid #4caf50;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
         }
         .important {
-            background: #fff3e0;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(226, 62, 87, 0.2));
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             margin: 15px 0;
-            border-left: 4px solid #ff9800;
+            border-left: 4px solid #FF6B35;
+            backdrop-filter: blur(5px);
         }
         ul {
             padding-left: 20px;
         }
         li {
             margin-bottom: 8px;
+            color: #F0F0F0;
+        }
+        p {
+            color: #F0F0F0;
         }
         .date {
             text-align: right;
             font-style: italic;
-            color: #666;
+            color: #C0C0C0;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid rgba(255, 107, 53, 0.3);
         }
         a {
-            color: #1a73e8;
+            color: #FF6B35;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         a:hover {
+            color: #E23E57;
             text-decoration: underline;
+        }
+        strong {
+            color: #FF6B35;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-text {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FF6B35, #E23E57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo">
+            <div class="logo-text">KOLLEKTOR</div>
+        </div>
         <h1>POLÍTICA DE PRIVACIDAD</h1>
         
         <div class="app-info">
@@ -201,7 +236,8 @@
         <h3>6.2 Cómo Ejercer tus Derechos</h3>
         <p>Para ejercer cualquiera de estos derechos, contáctanos a través de:</p>
         <ul>
-            <li>Email: <a href="mailto:privacidad@ankora.com">privacidad@ankora.com</a></li>
+            <li>Email: <a href="mailto:yeisonbetancourthaponte@gmail.com">yeisonbetancourthaponte@gmail.com</a></li>
+            <li>Teléfono/WhatsApp: <a href="tel:+573122258970">+57 312 225 8970</a></li>
             <li>Soporte dentro de la app</li>
             <li>Formulario de contacto en nuestra web</li>
         </ul>
@@ -249,13 +285,14 @@
 
         <div class="contact-info">
             <h3>📞 CONTACTO</h3>
-            <p><strong>Para consultas sobre privacidad:</strong></p>
-            <p>📧 Email: <a href="mailto:privacidad@ankora.com">privacidad@ankora.com</a></p>
-            <p>📧 Soporte general: <a href="mailto:soporte@ankora.com">soporte@ankora.com</a></p>
-            <p>🌐 Web: <a href="https://www.ankora.com">www.ankora.com</a></p>
+            <p><strong>Para consultas sobre privacidad y soporte:</strong></p>
+            <p>📧 Email: <a href="mailto:yeisonbetancourthaponte@gmail.com">yeisonbetancourthaponte@gmail.com</a></p>
+            <p>� Teléfono/WhatsApp: <a href="tel:+573122258970">+57 312 225 8970</a></p>
+            <p>🌐 Web: <a href="https://hellscytheb.github.io/AnkoraDev.io">AnkoraDev.io</a></p>
             <p>📱 Soporte en la app: Menú → Configuración → Soporte</p>
             
             <p><strong>Tiempo de respuesta:</strong> 48 horas hábiles máximo</p>
+            <p><strong>Horario de atención telefónica:</strong> Lunes a Viernes 8:00 AM - 6:00 PM (GMT-5)</p>
         </div>
 
         <div class="date">
