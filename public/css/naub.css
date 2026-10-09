@@ -1,0 +1,403 @@
+/* Naub product page + home block */
+.naub-page .naub-title,
+.naub-page .naub-tag,
+.naub-page .naub-section-title,
+.naub-page h2,
+.naub-page h3 {
+  font-family: "Syne", "Montserrat", sans-serif;
+}
+
+.naub-eyebrow {
+  color: #7dd3fc !important;
+}
+
+.naub-hero-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.naub-hero-copy { text-align: left; }
+
+.naub-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.naub-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  box-shadow: 0 0 22px rgba(192, 132, 252, 0.35);
+  object-fit: cover;
+  background: #000;
+}
+
+.naub-logo-sm {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #000;
+}
+
+.naub-home-panel {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.naub-brand-mark {
+  width: 132px;
+  height: 132px;
+  border-radius: 28px;
+  padding: 6px;
+  margin-bottom: 18px;
+  background: linear-gradient(145deg, rgba(192, 132, 252, 0.35), rgba(56, 189, 248, 0.2));
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.naub-brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  background: #000;
+}
+
+.naub-home-panel h3 {
+  margin: 0 0 10px;
+  color: #7dd3fc;
+  font-family: "Syne", "Montserrat", sans-serif;
+}
+
+.naub-home-panel p {
+  margin: 0 0 16px;
+  color: #b6c3d1;
+  line-height: 1.65;
+  max-width: 28rem;
+}
+
+.naub-plan-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.naub-plan-chips span {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e0f2fe;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+}
+
+.naub-badge {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e0f2fe;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.naub-title {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -1.5px;
+}
+
+.naub-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin: 0 0 14px;
+}
+
+.naub-lead {
+  color: #c5d0dc;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 26px;
+  max-width: 38rem;
+}
+
+.naub-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.naub-cta-row.center { justify-content: center; }
+
+a.btn-naub,
+a.btn-naub:link,
+a.btn-naub:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #38BDF8, #6366F1);
+  color: #fff !important;
+  font-weight: 800;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.btn-naub:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.35);
+}
+
+a.btn-naub-outline,
+a.btn-naub-outline:link,
+a.btn-naub-outline:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(125, 211, 252, 0.45);
+  color: #e0f2fe !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  background: transparent;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+a.btn-naub-outline:hover {
+  border-color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-2px);
+}
+
+.naub-hero-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 20px;
+  padding: 28px 26px;
+  text-align: left;
+}
+
+.naub-hero-card h2 {
+  color: #7dd3fc;
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.naub-hero-card > p {
+  color: #b6c3d1;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+.naub-check {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.naub-check li {
+  position: relative;
+  padding: 8px 0 8px 22px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.naub-check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38BDF8;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.55);
+}
+
+.naub-section-title {
+  text-align: center;
+  color: #7dd3fc;
+  margin-bottom: 10px;
+}
+
+.naub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.naub-grid article {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 16px;
+  padding: 22px 20px;
+}
+
+.naub-grid h3 {
+  color: #bae6fd;
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.naub-grid p {
+  margin: 0;
+  color: #9fb0c0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.naub-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.naub-plan {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 18px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.naub-plan-hot {
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 12px 36px rgba(99, 102, 241, 0.18);
+  position: relative;
+}
+
+.naub-plan-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.naub-plan h3 {
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.naub-price {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #7dd3fc;
+  font-family: "Syne", "Montserrat", sans-serif;
+}
+
+.naub-price span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.naub-plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 16px;
+  flex: 1;
+}
+
+.naub-plan li {
+  padding: 6px 0;
+  color: #b6c3d1;
+  font-size: 0.92rem;
+}
+
+.naub-plan .btn-naub,
+.naub-plan .btn-naub-outline {
+  width: 100%;
+}
+
+.naub-disclaimer {
+  text-align: center;
+  color: #8b9aab;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.naub-disclaimer a { color: #7dd3fc; }
+
+.naub-cta-block { text-align: center; }
+
+.naub-page .hamburger { display: none; }
+
+/* Home spotlight for Naub */
+.naub-home {
+  border: 1px solid rgba(56, 189, 248, 0.18) !important;
+}
+
+.naub-home .section-eyebrow { color: #7dd3fc; }
+
+.naub-home h2 {
+  color: #7dd3fc;
+  font-family: "Syne", "Montserrat", sans-serif;
+}
+
+.naub-home .spotlight-tag { color: #bae6fd; }
+
+.naub-home .spotlight-list li::before {
+  background: #38BDF8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .naub-page .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .naub-hero-row,
+  .naub-grid,
+  .naub-plans {
+    grid-template-columns: 1fr;
+  }
+
+  .naub-hero-copy,
+  .naub-hero-brand,
+  .naub-cta-row {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .naub-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

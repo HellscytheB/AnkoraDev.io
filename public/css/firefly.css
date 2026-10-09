@@ -1,0 +1,66 @@
+/* Firefly Animation — versión ligera */
+.firefly-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.firefly {
+  width: 4px;
+  height: 4px;
+  background: #2fff8c;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 0 6px #2fff8c, 0 0 12px #2fff8c;
+  animation: firefly-dance 10s linear infinite, firefly-glow 2.5s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+@keyframes firefly-dance {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  10%  { opacity: 0.85; }
+  25%  { transform: translate(80px, -40px); opacity: 0.7; }
+  50%  { transform: translate(-60px, 70px); opacity: 1; }
+  75%  { transform: translate(50px, -30px); opacity: 0.6; }
+  90%  { opacity: 0.8; }
+  100% { transform: translate(0, 0); opacity: 0; }
+}
+
+@keyframes firefly-glow {
+  0%   { box-shadow: 0 0 4px #2fff8c, 0 0 8px #2fff8c; }
+  100% { box-shadow: 0 0 10px #2fff8c, 0 0 18px #2fff8c; }
+}
+
+.firefly:nth-child(1)  { left: 10%; top: 20%; animation-duration: 12s, 3s; animation-delay: 0s, 0.5s; }
+.firefly:nth-child(2)  { left: 30%; top: 40%; animation-duration: 9s, 2.5s; animation-delay: 1.2s, 0.8s; }
+.firefly:nth-child(3)  { left: 55%; top: 15%; animation-duration: 14s, 3.2s; animation-delay: 0.4s, 1.1s; }
+.firefly:nth-child(4)  { left: 75%; top: 55%; animation-duration: 11s, 2.2s; animation-delay: 2s, 0.3s; }
+.firefly:nth-child(5)  { left: 88%; top: 28%; animation-duration: 13s, 3.5s; animation-delay: 0.8s, 1.5s; }
+.firefly:nth-child(6)  { left: 18%; top: 70%; animation-duration: 10s, 2.8s; animation-delay: 1.8s, 0.6s; }
+.firefly:nth-child(7)  { left: 42%; top: 82%; animation-duration: 15s, 2s; animation-delay: 0.6s, 1.2s; }
+.firefly:nth-child(8)  { left: 65%; top: 45%; animation-duration: 8s, 2.4s; animation-delay: 2.5s, 0.4s; }
+.firefly:nth-child(9)  { left: 8%;  top: 48%; animation-duration: 12s, 3s; animation-delay: 1.5s, 0.9s; }
+.firefly:nth-child(10) { left: 92%; top: 75%; animation-duration: 11s, 2.6s; animation-delay: 0.2s, 1.4s; }
+
+@media (max-width: 768px) {
+  .firefly {
+    width: 3px;
+    height: 3px;
+    box-shadow: 0 0 4px #2fff8c, 0 0 8px #2fff8c;
+  }
+  .firefly:nth-child(n+7) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .firefly {
+    animation: none;
+    opacity: 0.25;
+  }
+}

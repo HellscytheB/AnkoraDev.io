@@ -1,0 +1,581 @@
+/* =========================================================
+   Samau Brand Theme — Forest Teal (#00695C) + Sage (#70B2B2) + Ice Aqua (#9ECFD4) + Soft Lime (#E5E9C5)
+   Diseñado para la plataforma oficial de Juntas de Acción Comunal en Colombia (Ley 2166).
+   ========================================================= */
+
+:root {
+  /* Fondo Forest Night profundo */
+  --bg: #041412;
+  --bg-2: #08201c;
+  --surface: rgba(4, 38, 34, 0.45);
+  --surface-2: rgba(8, 56, 50, 0.55);
+  --line: rgba(112, 178, 178, 0.16);
+  --line-2: rgba(112, 178, 178, 0.28);
+
+  --ink: #f8fafc;
+  --muted: #94a3b8;
+  --dim: #64748b;
+
+  /* Colores oficiales de Samau */
+  --samau-primary: #00695C;
+  --samau-dark: #004D40;
+  --samau-secondary: #70B2B2;
+  --samau-tertiary: #9ECFD4;
+  --samau-soft: #E5E9C5;
+
+  --glow: #2dd4bf;
+  --glow-2: #70b2b2;
+  --glow-3: #00695c;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* Atmósfera con luces Forest Teal y Aqua */
+.ambient {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(0, 105, 92, 0.32) 0%, transparent 50%),
+    radial-gradient(circle at 85% 25%, rgba(112, 178, 178, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(45, 212, 191, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 20% 90%, rgba(229, 233, 197, 0.12) 0%, transparent 45%);
+}
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(112, 178, 178, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 178, 178, 0.04) 1px, transparent 1px);
+}
+
+/* Nav flotante con tinte Forest */
+.nav {
+  background: rgba(8, 32, 28, 0.75);
+  border-color: rgba(112, 178, 178, 0.16);
+}
+
+.nav-wrap.scrolled .nav {
+  background: rgba(4, 20, 18, 0.92);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(112, 178, 178, 0.12);
+}
+
+/* Botón CTA del Nav */
+.nav-cta {
+  background: linear-gradient(135deg, #00695c, #2dd4bf) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset, 0 6px 20px rgba(0, 105, 92, 0.4) !important;
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 8px 30px rgba(45, 212, 191, 0.55) !important;
+}
+
+/* Botón primario de Samau */
+.btn-primary {
+  color: #fff !important;
+  background: linear-gradient(135deg, #00695c 0%, #2dd4bf 100%) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .2) inset,
+    0 10px 30px -6px rgba(0, 105, 92, .6) !important;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .3) inset,
+    0 16px 50px -6px rgba(45, 212, 191, .75) !important;
+}
+
+/* Pill superior */
+.pill {
+  color: #ccfbf1;
+  background: rgba(45, 212, 191, 0.1);
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+.pill-dot {
+  background: var(--glow);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+/* Título con gradiente entre Ice Aqua, Blanco y Soft Lime */
+.shine {
+  background: linear-gradient(100deg, #9ecfd4 0%, #ffffff 30%, #e5e9c5 60%, #70b2b2 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(45, 212, 191, 0.35));
+}
+
+/* Halo del hero con mezcla Teal y Aqua */
+.hero-halo {
+  background: radial-gradient(circle, rgba(0, 105, 92, 0.32) 0%, rgba(112, 178, 178, 0.18) 45%, transparent 70%);
+}
+
+/* Teléfono 3D */
+.phone {
+  background: linear-gradient(160deg, #004d40, #041c18 65%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .1) inset,
+    0 0 0 1px rgba(0, 0, 0, .6),
+    0 40px 80px -20px rgba(0, 0, 0, .8),
+    0 0 80px -10px rgba(0, 105, 92, .45);
+}
+
+/* Tarjetas flotantes */
+.float-card {
+  background: rgba(6, 28, 24, 0.88);
+  border-color: rgba(112, 178, 178, 0.22);
+  box-shadow: 0 20px 40px -10px rgba(2, 14, 12, 0.85);
+}
+
+/* Estadísticas y Contadores */
+.stats {
+  border-color: rgba(112, 178, 178, 0.14);
+  background: rgba(4, 38, 34, 0.22);
+}
+
+.stat {
+  border-right-color: rgba(112, 178, 178, 0.14);
+}
+
+.stat-num {
+  background: linear-gradient(180deg, #fff, #9ecfd4 60%, #70b2b2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.marquee {
+  border-block-color: rgba(112, 178, 178, 0.14);
+  background: rgba(4, 38, 34, 0.2);
+}
+
+.marquee b {
+  color: var(--glow);
+}
+
+/* =========================================================
+   BENTO GRID DE SAMAU (Módulos de Gestión Comunal)
+   ========================================================= */
+.bento-samau {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+
+.bento-card {
+  position: relative;
+  padding: 34px 30px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(8, 44, 38, 0.45), rgba(4, 24, 20, 0.35));
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease);
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(45, 212, 191, 0.42);
+  box-shadow: 0 25px 50px -15px rgba(2, 14, 12, 0.8), 0 0 30px -10px rgba(0, 105, 92, 0.4);
+}
+
+.span-4 { grid-column: span 4; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-6 { grid-column: span 6; }
+
+.bento-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 12px 0 10px;
+  line-height: 1.25;
+}
+
+.bento-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+/* Widget 1: Ficha del Censo Comunitario */
+.censo-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(112, 178, 178, 0.18);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.censo-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.censo-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.censo-grid-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.censo-item-box {
+  background: rgba(8, 36, 30, 0.6);
+  border: 1px solid rgba(112, 178, 178, 0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.censo-item-box small {
+  display: block;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.censo-item-box strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #f1f5f9;
+  margin-top: 3px;
+}
+
+/* Widget 2: Dignatarios y Auto Reconocimiento */
+.dignatarios-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(112, 178, 178, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dignatario-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(8, 36, 30, 0.5);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dignatario-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(45, 212, 191, 0.2);
+  color: #2dd4bf;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.dignatario-info strong {
+  display: block;
+  font-size: 0.82rem;
+  color: #fff;
+}
+
+.dignatario-info small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* Widget 3: Estadísticas Demográficas y Género */
+.charts-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(112, 178, 178, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+}
+
+.bar-label {
+  width: 70px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.bar-fill {
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #00695c, #2dd4bf);
+}
+
+/* Widget 4: Sincronización Offline */
+.offline-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(112, 178, 178, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.offline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  background: rgba(229, 233, 197, 0.12);
+  color: #e5e9c5;
+  border: 1px solid rgba(229, 233, 197, 0.25);
+}
+
+/* Widget 5: Ley 2166 Pipeline */
+.legal-widget {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(112, 178, 178, 0.18);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.legal-box {
+  background: rgba(8, 36, 30, 0.6);
+  border: 1px solid rgba(112, 178, 178, 0.14);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.legal-box span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #2dd4bf;
+  margin-bottom: 4px;
+}
+
+.legal-box strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* =========================================================
+   COMPARATIVA: CUADERNOS VS SAMAU
+   ========================================================= */
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.comp-card {
+  position: relative;
+  padding: 36px 32px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(8, 44, 38, 0.4), rgba(4, 24, 20, 0.3));
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-card.bad {
+  border-color: rgba(239, 68, 68, 0.35);
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.08) 0%, rgba(4, 24, 20, 0.4) 100%);
+  box-shadow: 0 20px 45px -15px rgba(239, 68, 68, 0.15);
+}
+
+.comp-card.good {
+  border-color: rgba(45, 212, 191, 0.45);
+  background: linear-gradient(180deg, rgba(0, 105, 92, 0.18) 0%, rgba(45, 212, 191, 0.08) 50%, rgba(4, 24, 20, 0.4) 100%);
+  box-shadow: 0 25px 50px -15px rgba(0, 105, 92, 0.3);
+}
+
+.comp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.comp-badge.bad {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.comp-badge.good {
+  background: rgba(45, 212, 191, 0.18);
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  color: #2dd4bf;
+}
+
+.comp-card h3 {
+  font-size: 1.55rem;
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+}
+
+.comp-card.bad h3 { color: #fca5a5; }
+.comp-card.good h3 { color: #fff; }
+
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.comp-row-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.comp-card.bad .comp-row-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.comp-card.good .comp-row-icon {
+  background: rgba(45, 212, 191, 0.2);
+  color: #2dd4bf;
+  border: 1px solid rgba(45, 212, 191, 0.5);
+}
+
+.comp-row-content {
+  flex: 1;
+}
+
+.comp-row-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #f1f5f9;
+  margin-bottom: 2px;
+}
+
+.comp-row-content p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.comp-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.comp-tag.bad {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.comp-tag.good {
+  background: rgba(45, 212, 191, 0.15);
+  color: #ccfbf1;
+  border: 1px solid rgba(45, 212, 191, 0.3);
+}
+
+/* Banner CTA Final */
+.cta-band {
+  border-color: rgba(112, 178, 178, 0.2);
+  background: linear-gradient(180deg, rgba(8, 44, 38, 0.45), rgba(4, 24, 20, 0.35));
+}
+
+.cta-glow {
+  background: radial-gradient(ellipse at center, rgba(0, 105, 92, 0.38) 0%, rgba(45, 212, 191, 0.2) 40%, transparent 70%);
+}
+
+.footer {
+  border-top-color: rgba(112, 178, 178, 0.14);
+  background: linear-gradient(180deg, transparent, rgba(4, 38, 34, 0.4));
+}
+
+.footer-mega {
+  background: linear-gradient(180deg, rgba(112, 178, 178, 0.18), rgba(255, 255, 255, 0) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 960px) {
+  .bento-samau {
+    grid-template-columns: 1fr;
+  }
+  .span-4, .span-2, .span-3, .span-6 {
+    grid-column: span 1 !important;
+  }
+  .legal-widget {
+    grid-template-columns: 1fr;
+  }
+  .comp-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

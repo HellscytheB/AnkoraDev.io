@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Samau es la plataforma para digitalizar Juntas de Acción Comunal (JAC) en Colombia. Censo comunitario de hogares, caracterización sociodemográfica, trámites y transparencia bajo la Ley 2166 de 2021.">
+  <meta name="keywords" content="Samau, JAC Colombia, Juntas de Acción Comunal, Ley 2166 de 2021, censo comunal, caracterización comunitaria, censo veredal, certificados de residencia, AnkoraDev">
+  <meta name="author" content="AnkoraDev">
+  <meta name="geo.region" content="CO">
+  <meta name="geo.placename" content="Colombia">
+  <meta name="theme-color" content="#041412">
+  <title>Samau — Gestión Comunal y Censo para JAC en Colombia | AnkoraDev</title>
+  <link rel="canonical" href="https://ankoradev.io/samau">
+  <link rel="alternate" hreflang="es-CO" href="https://ankoradev.io/samau">
+  <link rel="alternate" hreflang="x-default" href="https://ankoradev.io/samau">
+
+  <meta property="og:site_name" content="AnkoraDev">
+  <meta property="og:title" content="Samau — Gestión Comunal Inteligente para JAC">
+  <meta property="og:description" content="Digitaliza tu Junta de Acción Comunal: censo de hogares, afiliados, comités y reportes listos para Alcaldías y Gobernaciones bajo la Ley 2166 de 2021.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ankoradev.io/samau">
+  <meta property="og:image" content="https://ankoradev.io/img/samau-logo.png">
+  <meta property="og:image:alt" content="Logo de Samau">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samau — Gestión Comunal Inteligente">
+  <meta name="twitter:description" content="Censo comunitario, afiliados y reportes oficiales para Juntas de Acción Comunal en Colombia.">
+  <meta name="twitter:image" content="https://ankoradev.io/img/samau-logo.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/firefly.png">
+  <link rel="shortcut icon" href="logo/firefly.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css?v=20261009v6">
+  <link rel="stylesheet" href="css/samau-theme.css?v=20261009jac">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- Capas de ambiente y Motion Graphics (exactas a la home) -->
+  <canvas id="fireflies" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+  <!-- NAV FLOTANTE -->
+  <header class="nav-wrap" id="nav-wrap">
+    <nav class="nav" aria-label="Navegación Samau">
+      <a href="/" class="nav-brand" title="Volver a AnkoraDev">
+        <img src="img/samau-logo.png" alt="Logo Samau" width="28" height="28" style="border-radius: 8px;">
+        <span>Samau</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#censo">Censo Comunal</a>
+        <a href="#modulos">Módulos</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            <span>Productos</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="/kollektor" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/logo_kollektor.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Kollektor <span class="ndi-badge badge-green">App</span></div>
+                <p class="ndi-desc">Cobro diario, rutas con mapa y cartera</p>
+              </div>
+            </a>
+            <a href="/naub" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/naub_logo_square.webp" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Naub <span class="ndi-badge badge-indigo">SaaS IA</span></div>
+                <p class="ndi-desc">Redes sociales, WhatsApp y automatización</p>
+              </div>
+            </a>
+            <a href="/samau" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="img/samau-logo.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Samau <span class="ndi-badge badge-teal">JAC</span></div>
+                <p class="ndi-desc">Censo comunitario y gestión Ley 2166</p>
+              </div>
+            </a>
+            <a href="/logik" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/logik_icon.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">LoGiK <span class="ndi-badge badge-red">Logística</span></div>
+                <p class="ndi-desc">Red y bolsa de empleo de transporte de carga</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="#comparativa">Ventajas</a>
+        <a href="#faq">Preguntas</a>
+        <a href="/">← AnkoraDev</a>
+      </div>
+      <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20postular%20mi%20JAC%20al%20piloto%20de%20Samau" target="_blank" rel="noopener" class="nav-cta magnetic"><span>Postular JAC</span> <span aria-hidden="true">→</span></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20postular%20mi%20JAC%20al%20piloto%20de%20Samau" target="_blank" rel="noopener" class="pill reveal">
+            <span class="pill-dot"></span>
+            Para JAC de Colombia · Fase Piloto Abierta
+            <span class="pill-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <h1 class="hero-title split">
+            La digitalización definitiva de las <em class="shine">Juntas de Acción Comunal</em>.
+          </h1>
+
+          <p class="hero-lead reveal" style="--d:.5s">
+            Samau saca la gestión comunitaria de los cuadernos de papel y chats dispersos. <strong>Censo de hogares caracterizado</strong>, libros de afiliados, comités y reportes oficiales listos para Alcaldías y Gobernaciones bajo el marco de la <strong>Ley 2166 de 2021</strong>.
+          </p>
+
+          <div class="hero-cta reveal" style="--d:.65s">
+            <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20postular%20mi%20JAC%20al%20piloto%20de%20Samau" target="_blank" rel="noopener" class="btn btn-primary magnetic">
+              <span>Postular mi JAC al Piloto</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#modulos" class="btn btn-ghost magnetic">
+              Conocer los Módulos
+            </a>
+          </div>
+
+          <ul class="hero-meta reveal" style="--d:.8s">
+            <li><span class="mono">01</span> Censo de Hogares &amp; Familias</li>
+            <li><span class="mono">02</span> Estructura Directiva &amp; Comités</li>
+            <li><span class="mono">03</span> Reportes Ley 2166 de 2021</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.35s" id="hero-visual">
+          <div class="orbit orbit-1" aria-hidden="true"><i></i></div>
+          <div class="orbit orbit-2" aria-hidden="true"><i></i></div>
+          <div class="orbit orbit-3" aria-hidden="true"><i></i></div>
+          <div class="hero-halo" aria-hidden="true"></div>
+
+          <!-- TELÉFONO 3D TILT CON CAPTURAS REALES -->
+          <div class="phone tilt" data-depth="1">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-screen" id="hero-screens">
+              <img src="img/samau-dashboard.png" alt="Pantalla de inicio de Samau con JAC San José Obrero" width="460" height="1024" class="active" fetchpriority="high">
+              <img src="img/samau-censo.png" alt="Censo de hogares en Samau" width="460" height="1024" loading="lazy">
+              <img src="img/samau-charts.png" alt="Estadísticas y pirámides demográficas en Samau" width="460" height="1024" loading="lazy">
+              <img src="img/samau-demografia.png" alt="Demografía y caracterización en Samau" width="460" height="1024" loading="lazy">
+              <img src="img/samau-login.png" alt="Inicio de sesión seguro en Samau" width="460" height="1024" loading="lazy">
+            </div>
+          </div>
+
+          <!-- MINI TARJETAS FLOTANTES -->
+          <div class="float-card fc-1" data-depth="2.2">
+            <span class="fc-icon" style="color: #2dd4bf; background: rgba(45,212,191,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <div><strong>JAC San José Obrero · Auto 0771</strong><small>Cartago, Valle del Cauca</small></div>
+          </div>
+          <div class="float-card fc-2" data-depth="3">
+            <span class="fc-icon" style="color: #70b2b2; background: rgba(112,178,178,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div><strong>Censo comunitario · 142 Familias</strong><small>Vivienda, personas y servicios</small></div>
+          </div>
+          <div class="float-card fc-3" data-depth="1.6">
+            <span class="fc-icon" style="color: #e5e9c5; background: rgba(229,233,197,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </span>
+            <div><strong>Ley 2166 de 2021</strong><small>100% Auditable y oficial</small></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#censo" class="scroll-hint" aria-label="Bajar a Censo Comunal">
+        <span class="mouse"><i></i></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Censo Comunal</span><b>✦</b><span>Ley 2166 de 2021</span><b>✦</b><span>Caracterización de Hogares</span><b>✦</b><span>Libro de Afiliados</span><b>✦</b><span>Trámites Rápidos</span><b>✦</b><span>Reportes a Alcaldías</span><b>✦</b><span>Zonas Urbanas y Veredales</span><b>✦</b>
+        <span>Censo Comunal</span><b>✦</b><span>Ley 2166 de 2021</span><b>✦</b><span>Caracterización de Hogares</span><b>✦</b><span>Libro de Afiliados</span><b>✦</b><span>Trámites Rápidos</span><b>✦</b><span>Reportes a Alcaldías</span><b>✦</b><span>Zonas Urbanas y Veredales</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ESTADÍSTICAS / MÉTRICAS -->
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 01</span> Rigor Comunal y Legal</p>
+          <h2 class="title reveal">Información fidedigna para postular y ganar proyectos del Estado.</h2>
+        </header>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat-num"><span data-count="100">100</span>%</div>
+            <div class="stat-lbl">Ley 2166 de 2021</div>
+            <p class="stat-desc">Estructurado exactamente según los requerimientos del marco legislativo comunal de Colombia.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="3">3</span> Niveles</div>
+            <div class="stat-lbl">Profundidad del censo</div>
+            <p class="stat-desc">Datos del territorio, caracterización de la vivienda y miembros del núcleo familiar.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="0">0</span> Papel</div>
+            <div class="stat-lbl">Gestión digital en la nube</div>
+            <p class="stat-desc">Se acabaron las carpetas que se mojan o se pierden con cada cambio de periodo de dignatarios.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="100">100</span>%</div>
+            <div class="stat-lbl">Funciona Offline</div>
+            <p class="stat-desc">Levanta encuestas en veredas y zonas rurales sin señal; sincroniza automáticamente con Wi-Fi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID DE MÓDULOS DE SAMAU -->
+    <section id="modulos" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 02</span> Arquitectura de Samau</p>
+          <h2 class="title reveal">Todo lo que necesita una junta para gobernar con orden y transparencia.</h2>
+          <p class="lead reveal">Construido escuchando las necesidades reales de presidentes, secretarios, tesoreros y fiscales de barrio y vereda.</p>
+        </header>
+
+        <div class="bento-samau">
+          <!-- BENTO 1: CENSO COMUNITARIO (SPAN 4) -->
+          <article id="censo" class="bento-card span-4 reveal">
+            <span class="card-tag">Caracterización</span>
+            <h3>Censo detallado de hogares, viviendas y personas</h3>
+            <p>
+              Registra cada familia con su cabeza de hogar, integrantes, niveles de estudio, edades, SISBÉN y estado de salud. Documenta condiciones de vivienda (materiales, servicios de agua, energía e internet) y actividades económicas o negocios familiares.
+            </p>
+
+            <div class="censo-widget">
+              <div class="censo-widget-header">
+                <span class="censo-badge">FICHA DE HOGAR #042 · ACTIVA</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted);">COORD: 4.7483° N, -75.9122° W</span>
+              </div>
+              <div class="censo-grid-preview">
+                <div class="censo-item-box">
+                  <small>Cabeza de Hogar</small>
+                  <strong>María F. Gómez</strong>
+                </div>
+                <div class="censo-item-box">
+                  <small>Integrantes</small>
+                  <strong>4 personas</strong>
+                </div>
+                <div class="censo-item-box">
+                  <small>Servicios</small>
+                  <strong>Agua, Luz, Gas</strong>
+                </div>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 2: DIGNATARIOS Y AUTO DE RECONOCIMIENTO (SPAN 2) -->
+          <article class="bento-card span-2 reveal" style="--d:.1s">
+            <span class="card-tag">Gobernanza</span>
+            <h3>Libros y Directiva Oficial</h3>
+            <p>
+              Estructura formal con Presidente, Vicepresidente, Tesorero, Fiscal y Comités con actas de posesión enlazadas.
+            </p>
+
+            <div class="dignatarios-widget">
+              <div class="dignatario-row">
+                <div class="dignatario-avatar">Y</div>
+                <div class="dignatario-info">
+                  <strong>Yeison (Presidente)</strong>
+                  <small>Vigencia 2024–2026</small>
+                </div>
+              </div>
+              <div class="dignatario-row">
+                <div class="dignatario-avatar">R</div>
+                <div class="dignatario-info">
+                  <strong>Roberto (Tesorero)</strong>
+                  <small>Libro auditado</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 3: ESTADÍSTICAS Y PIRÁMIDES DEMOGRÁFICAS (SPAN 3) -->
+          <article class="bento-card span-3 reveal" style="--d:.15s">
+            <span class="card-tag">Demografía</span>
+            <h3>Estadísticas y pirámides poblacionales</h3>
+            <p>
+              Genera gráficos automáticos de distribución por edades, género, ocupaciones y necesidades prioritarias (vías, salud, educación). Información con rigor estadístico para formular proyectos ante el Estado.
+            </p>
+
+            <div class="charts-widget">
+              <div class="bar-row">
+                <span class="bar-label">Infancia</span>
+                <div class="bar-fill" style="width: 45%;"></div>
+                <span style="font-size: 0.72rem; color: #2dd4bf; margin-left: 6px;">28%</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Jóvenes</span>
+                <div class="bar-fill" style="width: 55%;"></div>
+                <span style="font-size: 0.72rem; color: #2dd4bf; margin-left: 6px;">35%</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Adulto M.</span>
+                <div class="bar-fill" style="width: 35%;"></div>
+                <span style="font-size: 0.72rem; color: #2dd4bf; margin-left: 6px;">22%</span>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 4: OFFLINE-FIRST PARA VEREDAS (SPAN 3) -->
+          <article class="bento-card span-3 reveal" style="--d:.2s">
+            <span class="card-tag">Cobertura</span>
+            <h3>100% Offline para veredas y zonas rurales</h3>
+            <p>
+              Sabemos que la señal en las veredas colombianas es intermitente. Los encuestadores pueden censar casa por casa sin internet; la app guarda los datos cifrados y los sincroniza de manera automática al regresar a una zona con cobertura.
+            </p>
+
+            <div class="offline-widget">
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: #fff;">Sincronización en cola</strong>
+                <small style="color: var(--muted); font-size: 0.75rem;">18 predios censados en campo</small>
+              </div>
+              <span class="offline-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Listo p/ subir
+              </span>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 5: LEY 2166 DE 2021 (SPAN 6) -->
+          <article id="ley2166" class="bento-card span-6 reveal" style="--d:.25s">
+            <span class="card-tag">Marco Legal</span>
+            <h3>Trámites, certificados y transparencia bajo la Ley 2166 de 2021</h3>
+            <p>
+              Cumple con los requisitos exigidos por Secretarías de Gobierno, Personerías y entes de inspección, vigilancia y control. Emite certificados de residencia legítimos y descarga informes en PDF o Excel con un solo clic.
+            </p>
+
+            <div class="legal-widget">
+              <div class="legal-box">
+                <span>01. CERTIFICADOS ÁGILES</span>
+                <strong>Generación inmediata de residencia con código de validación</strong>
+              </div>
+              <div class="legal-box">
+                <span>02. LIBROS AUDITABLES</span>
+                <strong>Trazabilidad de afiliados, actas de asamblea y cuotas comunales</strong>
+              </div>
+              <div class="legal-box">
+                <span>03. REPORTES TERRITORIALES</span>
+                <strong>Exportaciones listas para Alcaldías, Gobernaciones y MinInterior</strong>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVA: CUADERNOS VS SAMAU -->
+    <section id="comparativa" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 03</span> Evolución Comunal</p>
+          <h2 class="title reveal">La diferencia entre cuadernos físicos y la certeza de Samau.</h2>
+          <p class="lead reveal">Compara la fragilidad del manejo tradicional en papel contra un sistema comunal digital, seguro y duradero.</p>
+        </header>
+
+        <div class="comp-grid reveal">
+          <!-- MÉTODO TRADICIONAL -->
+          <div class="comp-card bad">
+            <span class="comp-badge bad">✕ Manejo Tradicional en Papel</span>
+            <h3>Sin Samau</h3>
+
+            <ul class="comp-list">
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Cuadernos que se dañan o se pierden</strong>
+                  <p>Cuando cambia la junta directiva, los libros se extravían y la información histórica desaparece.</p>
+                </div>
+                <span class="comp-tag bad">Pérdida Total</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Desconocimiento del censo real</strong>
+                  <p>No se sabe cuántos niños, ancianos, personas enfermas o con negocios viven en el territorio.</p>
+                </div>
+                <span class="comp-tag bad">A ciegas</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Proyectos rechazados en convocatorias</strong>
+                  <p>Las Alcaldías niegan recursos porque la junta no cuenta con cifras sociodemográficas verificables.</p>
+                </div>
+                <span class="comp-tag bad">Sin Fondos</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Trámites lentos y desconfianza</strong>
+                  <p>Expedir un certificado de residencia tarda días y los vecinos dudan del manejo de los libros.</p>
+                </div>
+                <span class="comp-tag bad">Conflictos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CON SAMAU -->
+          <div class="comp-card good">
+            <span class="comp-badge good">✓ Plataforma Comunal Samau</span>
+            <h3>Con Samau</h3>
+
+            <ul class="comp-list">
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Memoria histórica protegida en la nube</strong>
+                  <p>La información pertenece a la comunidad y trasciende a cualquier directiva o periodo de gobierno.</p>
+                </div>
+                <span class="comp-tag good">Permanente</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Censo y caracterización al detalle</strong>
+                  <p>Datos georreferenciados de familias, condiciones de vivienda, SISBÉN y necesidades prioritarias.</p>
+                </div>
+                <span class="comp-tag good">Claridad</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Respaldo sólido para ganar proyectos</strong>
+                  <p>Cifras y reportes estadísticos listos para postular a convenios solidarios y presupuestos participativos.</p>
+                </div>
+                <span class="comp-tag good">Recursos</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Certificados al instante y total transparencia</strong>
+                  <p>Emisión inmediata de certificados y libros de actas auditables que generan confianza comunitaria.</p>
+                </div>
+                <span class="comp-tag good">Legitimidad</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 04</span> Respuestas Comunitarias</p>
+          <h2 class="title reveal">Preguntas frecuentes sobre Samau.</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Qué es la Ley 2166 de 2021 y por qué es importante para mi JAC?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Es la ley que modernizó el marco legal de la acción comunal en Colombia (derogando la Ley 743). Exige a las juntas mayor democratización, depuración y actualización de libros de afiliados, comisiones de trabajo activas y formalidad para acceder a contratación comunal (convenios solidarios con el Estado). Samau fue diseñada específicamente bajo esta legislación.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Cómo se protegen los datos personales de los vecinos censados?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Cumplimos estrictamente con la <strong>Ley 1581 de 2012 de Protección de Datos Personales (Habeas Data)</strong>. Los datos viajan cifrados bajo HTTPS/TLS, se almacenan en infraestructura segura en la nube y únicamente los dignatarios autorizados de la JAC o los entes de control tienen acceso a la información según su rol.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Qué requisitos debe cumplir una JAC para entrar a la fase piloto?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Estar constituida formalmente con Auto de Reconocimiento o personería jurídica vigente, contar con al menos dos dignatarios con teléfono Android con acceso a WhatsApp, y tener la voluntad de levantar el censo de su barrio o vereda con el acompañamiento directo de AnkoraDev.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿La aplicación funciona en celulares sencillos de gama media o baja?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Sí. La aplicación móvil está optimizada en Flutter para funcionar con total fluidez en dispositivos Android modestos, consumiendo mínimo almacenamiento y batería, y permitiendo censar en modo offline cuando no hay plan de datos o cobertura.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDA CTA FINAL -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <span class="card-tag">Fase Piloto 2026</span>
+          <h2>¿Tu Junta de Acción Comunal lista para dar el salto digital?</h2>
+          <p>Únete a las JAC pioneras que están ordenando su territorio, transparentando sus libros y ganando proyectos con Samau.</p>
+          <div class="hero-cta center">
+            <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20postular%20mi%20JAC%20al%20piloto%20de%20Samau" target="_blank" rel="noopener" class="btn btn-primary magnetic">
+              <span>Postular mi JAC por WhatsApp</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="mailto:soporte@ankoradev.io?subject=Piloto%20Samau" class="btn btn-ghost magnetic">
+              Escribir por Correo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="nav-brand">
+            <img src="img/samau-logo.png" alt="Samau" width="32" height="32" loading="lazy" style="border-radius: 8px;">
+            <span>Samau</span>
+          </a>
+          <p>Plataforma para digitalizar Juntas de Acción Comunal en Colombia: censo de hogares, libros de afiliados y transparencia Ley 2166. Desarrollado por AnkoraDev.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <a href="#censo">Censo Comunal</a>
+          <a href="#modulos">Módulos</a>
+          <a href="#ley2166">Ley 2166 de 2021</a>
+          <a href="#faq">Preguntas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ecosistema Ankora</h4>
+          <a href="/">AnkoraDev</a>
+          <a href="/kollektor">Kollektor (Créditos)</a>
+          <a href="/naub">Naub (Redes e IA)</a>
+          <a href="/logik">LoGiK (Transporte)</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto &amp; Piloto</h4>
+          <a href="https://wa.me/573151029805" target="_blank" rel="noopener">WhatsApp +57 315 102 9805</a>
+          <a href="mailto:soporte@ankoradev.io">soporte@ankoradev.io</a>
+          <a href="/politica_privacidad">Política de Privacidad</a>
+        </div>
+      </div>
+      <div class="footer-mega" aria-hidden="true">SAMAU</div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> AnkoraDev · Samau para JAC en Colombia</span>
+        <a href="https://wa.me/573151029805?text=Hola%2C%20Samau" target="_blank" rel="noopener">Postular Junta al Piloto →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante con pulso -->
+  <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Samau" class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.59 2 2.19 6.4 2.19 11.85c0 2.1.62 4.05 1.8 5.72L2 22l4.6-1.52a10.8 10.8 0 0 0 5.44 1.47c5.45 0 9.85-4.4 9.85-9.85C21.9 6.4 17.5 2 12.04 2Zm0 17.86c-1.74 0-3.36-.53-4.72-1.44l-.34-.22-2.72.9.9-2.64-.23-.35a8.03 8.03 0 1 1 7.1 3.75Zm4.38-5.41c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.42-1.34-1.66-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 .02 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.12 3.64.58.25 1.02.4 1.36.51.57.18 1.08.16 1.49.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+  </a>
+
+  <!-- Motor Motion Graphics Compartido (60 FPS, ultra fluido) -->
+  <script src="js/home.js?v=20261009v5" defer></script>
+
+  <!-- JSON-LD SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Samau",
+    "alternateName": ["Samau JAC", "Samau Gestión Comunal", "Samau AnkoraDev"],
+    "operatingSystem": "Android, Web",
+    "applicationCategory": "GovernmentApplication",
+    "description": "Plataforma para digitalizar Juntas de Acción Comunal en Colombia: censo de hogares, libros de afiliados, trazabilidad comunitaria y reportes oficiales bajo la Ley 2166 de 2021.",
+    "keywords": "Juntas de Acción Comunal, JAC Colombia, Ley 2166 de 2021, censo comunal, caracterización de hogares, certificados de residencia",
+    "url": "https://ankoradev.io/samau",
+    "image": "https://ankoradev.io/img/samau-logo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "AnkoraDev",
+      "url": "https://ankoradev.io/"
+    }
+  }
+  </script>
+</body>
+</html>

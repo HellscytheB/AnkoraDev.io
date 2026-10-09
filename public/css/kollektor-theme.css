@@ -1,0 +1,194 @@
+/* =========================================================
+   Kollektor Brand Theme — Blackcurrant (#311D3F) + Verdes (#10b981, #34d399)
+   Inyecta la paleta oficial de Kollektor manteniendo todo el motor de animación.
+   ========================================================= */
+
+:root {
+  /* Fondo Blackcurrant profundo */
+  --bg: #0d0614;
+  --bg-2: #160a22;
+  --surface: rgba(49, 29, 63, 0.35);
+  --surface-2: rgba(74, 43, 92, 0.45);
+  --line: rgba(232, 222, 248, 0.12);
+  --line-2: rgba(232, 222, 248, 0.22);
+
+  --ink: #fdfcff;
+  --muted: #cfc2dc;
+  --dim: #8f7d9f;
+
+  /* Verdes oficiales Kollektor */
+  --glow: #34d399;
+  --glow-2: #a7f3d0;
+  --glow-3: #10b981;
+
+  /* Blackcurrant Palette */
+  --bc-main: #311D3F;
+  --bc-light: #4A2B5C;
+  --bc-dark: #1E0E2E;
+  --bc-accent: #c084fc;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* Atmósfera con mezcla Blackcurrant + Verdes de Kollektor */
+.ambient {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(126, 34, 206, 0.28) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(74, 43, 92, 0.4) 0%, transparent 55%),
+    radial-gradient(circle at 25% 90%, rgba(52, 211, 153, 0.14) 0%, transparent 45%);
+}
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(232, 222, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 222, 248, 0.04) 1px, transparent 1px);
+}
+
+/* Nav con matiz Blackcurrant */
+.nav {
+  background: rgba(26, 13, 38, 0.72);
+  border-color: rgba(232, 222, 248, 0.14);
+}
+
+.nav-wrap.scrolled .nav {
+  background: rgba(20, 9, 30, 0.9);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(232, 222, 248, 0.1);
+}
+
+/* Pill de Google Play */
+.pill {
+  color: #a7f3d0;
+  background: rgba(49, 29, 63, 0.55);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+/* Título con gradiente entre verde Kollektor y Blackcurrant radiante */
+.shine {
+  background: linear-gradient(100deg, #34d399 0%, #a7f3d0 25%, #e9d5ff 55%, #c084fc 80%, #10b981 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(52, 211, 153, 0.35));
+}
+
+/* Halo del teléfono combinando morado y verde */
+.hero-halo {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.32) 0%, rgba(52, 211, 153, 0.18) 45%, transparent 70%);
+}
+
+/* Marco del teléfono Blackcurrant pulido */
+.phone {
+  background: linear-gradient(160deg, #3d1f52, #180a26 60%);
+  border: 1px solid rgba(232, 222, 248, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 40px 80px -20px rgba(0, 0, 0, 0.85),
+    0 0 70px -10px rgba(74, 43, 92, 0.5),
+    0 0 45px -15px rgba(52, 211, 153, 0.35);
+}
+
+.orbit {
+  border-color: rgba(232, 222, 248, 0.08);
+}
+
+/* Tarjetas flotantes */
+.float-card {
+  background: rgba(30, 14, 44, 0.82);
+  border-color: rgba(232, 222, 248, 0.18);
+  box-shadow: 0 20px 40px -10px rgba(10, 4, 16, 0.7);
+}
+
+/* Tarjetas Bento y de funcionalidades */
+.card {
+  background: linear-gradient(180deg, rgba(49, 29, 63, 0.45), rgba(28, 12, 42, 0.35));
+  border-color: rgba(232, 222, 248, 0.12);
+}
+
+.card:hover {
+  border-color: rgba(52, 211, 153, 0.35);
+  box-shadow: 0 30px 60px -20px rgba(10, 4, 16, 0.85), 0 0 30px -10px rgba(49, 29, 63, 0.5);
+}
+
+.b-kollektor {
+  background:
+    radial-gradient(600px 400px at 85% 100%, rgba(52, 211, 153, 0.22), transparent 70%),
+    radial-gradient(400px 300px at 15% 20%, rgba(126, 34, 206, 0.24), transparent 60%),
+    linear-gradient(180deg, rgba(49, 29, 63, 0.55), rgba(28, 12, 42, 0.45));
+}
+
+.stats {
+  border-color: rgba(232, 222, 248, 0.12);
+  background: rgba(49, 29, 63, 0.25);
+}
+
+.stat {
+  border-right-color: rgba(232, 222, 248, 0.12);
+}
+
+.stat-num {
+  background: linear-gradient(180deg, #fff, #c084fc 70%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Marquee en Blackcurrant */
+.marquee {
+  border-block-color: rgba(232, 222, 248, 0.12);
+  background: rgba(49, 29, 63, 0.2);
+}
+
+.marquee span {
+  color: rgba(243, 238, 248, 0.85);
+}
+
+.marquee b {
+  color: var(--glow);
+}
+
+/* Banner CTA Final */
+.cta-band {
+  border-color: rgba(232, 222, 248, 0.18);
+  background: linear-gradient(180deg, rgba(74, 43, 92, 0.4), rgba(30, 14, 46, 0.3));
+}
+
+.cta-glow {
+  background: radial-gradient(ellipse at center, rgba(126, 34, 206, 0.35) 0%, rgba(16, 185, 129, 0.25) 40%, transparent 70%);
+}
+
+/* Footer */
+.footer {
+  border-top-color: rgba(232, 222, 248, 0.12);
+  background: linear-gradient(180deg, transparent, rgba(49, 29, 63, 0.4));
+}
+
+.footer-mega {
+  background: linear-gradient(180deg, rgba(192, 132, 252, 0.15), rgba(255, 255, 255, 0) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Asegurar que el navbar nunca parta textos */
+.nav-links a {
+  white-space: nowrap !important;
+}
+
+.nav-cta {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 18px !important;
+  line-height: 1.2 !important;
+}
+
+.nav-brand {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}

@@ -1,0 +1,536 @@
+/* =========================================================
+   LoGiK Brand Theme — Logistics Navy (#003554) + Crimson Red (#E30613) + Steel Cyan (#38bdf8)
+   Plataforma oficial de bolsa de empleo y red profesional del transporte de carga en Colombia.
+   ========================================================= */
+
+:root {
+  /* Fondo Dark Navy logístico */
+  --bg: #030f1c;
+  --bg-2: #06192d;
+  --surface: rgba(6, 26, 48, 0.45);
+  --surface-2: rgba(10, 42, 78, 0.55);
+  --line: rgba(147, 197, 253, 0.14);
+  --line-2: rgba(147, 197, 253, 0.26);
+
+  --ink: #f8fafc;
+  --muted: #94a3b8;
+  --dim: #64748b;
+
+  /* Colores oficiales de LoGiK */
+  --logik-navy: #003554;
+  --logik-red: #E30613;
+  --logik-red-glow: #f87171;
+  --logik-cyan: #38bdf8;
+
+  --glow: #e30613;
+  --glow-2: #38bdf8;
+  --glow-3: #003554;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* Atmósfera con luces Navy y Crimson */
+.ambient {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(227, 6, 19, 0.24) 0%, transparent 50%),
+    radial-gradient(circle at 85% 25%, rgba(0, 53, 84, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 20% 90%, rgba(227, 6, 19, 0.15) 0%, transparent 45%);
+}
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(147, 197, 253, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, 0.04) 1px, transparent 1px);
+}
+
+/* Nav flotante con tinte Navy */
+.nav {
+  background: rgba(4, 18, 34, 0.75);
+  border-color: rgba(147, 197, 253, 0.16);
+}
+
+.nav-wrap.scrolled .nav {
+  background: rgba(3, 14, 26, 0.92);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(147, 197, 253, 0.12);
+}
+
+/* Botón CTA del Nav */
+.nav-cta {
+  background: linear-gradient(135deg, #e30613, #dc2626) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset, 0 6px 20px rgba(227, 6, 19, 0.45) !important;
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 8px 30px rgba(227, 6, 19, 0.7) !important;
+}
+
+/* Botón primario de LoGiK */
+.btn-primary {
+  color: #fff !important;
+  background: linear-gradient(135deg, #e30613 0%, #b91c1c 100%) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .2) inset,
+    0 10px 30px -6px rgba(227, 6, 19, .6) !important;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .3) inset,
+    0 16px 50px -6px rgba(227, 6, 19, .85) !important;
+}
+
+/* Pill superior */
+.pill {
+  color: #fca5a5;
+  background: rgba(227, 6, 19, 0.12);
+  border-color: rgba(227, 6, 19, 0.3);
+}
+
+.pill-dot {
+  background: var(--glow);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+/* Título con gradiente entre Rojo activo, Blanco y Steel Cyan */
+.shine {
+  background: linear-gradient(100deg, #f87171 0%, #ffffff 35%, #93c5fd 65%, #38bdf8 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(227, 6, 19, 0.35));
+}
+
+/* Halo del hero con mezcla Crimson y Navy */
+.hero-halo {
+  background: radial-gradient(circle, rgba(227, 6, 19, 0.28) 0%, rgba(0, 53, 84, 0.24) 45%, transparent 70%);
+}
+
+/* Teléfono 3D */
+.phone {
+  background: linear-gradient(160deg, #0b2b48, #030e1a 65%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .1) inset,
+    0 0 0 1px rgba(0, 0, 0, .6),
+    0 40px 80px -20px rgba(0, 0, 0, .8),
+    0 0 80px -10px rgba(227, 6, 19, .4);
+}
+
+/* Tarjetas flotantes */
+.float-card {
+  background: rgba(6, 24, 44, 0.88);
+  border-color: rgba(147, 197, 253, 0.22);
+  box-shadow: 0 20px 40px -10px rgba(1, 8, 16, 0.85);
+}
+
+/* Estadísticas y Contadores */
+.stats {
+  border-color: rgba(147, 197, 253, 0.14);
+  background: rgba(6, 26, 48, 0.22);
+}
+
+.stat {
+  border-right-color: rgba(147, 197, 253, 0.14);
+}
+
+.stat-num {
+  background: linear-gradient(180deg, #fff, #93c5fd 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.marquee {
+  border-block-color: rgba(147, 197, 253, 0.14);
+  background: rgba(6, 26, 48, 0.2);
+}
+
+.marquee b {
+  color: #f87171;
+}
+
+/* =========================================================
+   BENTO GRID DE LOGIK (Módulos de Carga y Logística)
+   ========================================================= */
+.bento-logik {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+
+.bento-card {
+  position: relative;
+  padding: 34px 30px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(8, 34, 62, 0.45), rgba(4, 18, 34, 0.35));
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease);
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(227, 6, 19, 0.45);
+  box-shadow: 0 25px 50px -15px rgba(1, 8, 16, 0.8), 0 0 30px -10px rgba(227, 6, 19, 0.35);
+}
+
+.span-4 { grid-column: span 4; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-6 { grid-column: span 6; }
+
+.bento-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 12px 0 10px;
+  line-height: 1.25;
+}
+
+.bento-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+/* Widget 1: Vacantes y Bolsa de Carga */
+.job-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.16);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.job-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.job-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #f87171;
+  background: rgba(227, 6, 19, 0.15);
+  border: 1px solid rgba(227, 6, 19, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.job-preview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(6, 24, 46, 0.6);
+  border: 1px solid rgba(147, 197, 253, 0.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.job-preview-row strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #f1f5f9;
+}
+
+.job-preview-row small {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+.job-salary {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Widget 2: Verificación KYC Colombia */
+.kyc-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.16);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kyc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  background: rgba(6, 24, 46, 0.5);
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #cbd5e1;
+}
+
+.kyc-item span.ok {
+  color: #10b981;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Widget 3: Cargas Generadoras ↔ Transportistas */
+.freight-widget {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.16);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.freight-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.freight-route-arrow {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.freight-details {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.freight-chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #93c5fd;
+}
+
+/* Widget 4: Perfiles del Transporte */
+.roles-widget {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.16);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.role-pill {
+  text-align: center;
+  background: rgba(6, 24, 46, 0.6);
+  border: 1px solid rgba(147, 197, 253, 0.12);
+  border-radius: 8px;
+  padding: 8px 4px;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+}
+
+.role-pill strong {
+  display: block;
+  font-size: 0.78rem;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+/* Widget 5: Infraestructura Segura */
+.security-widget {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.16);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.sec-box {
+  background: rgba(6, 24, 46, 0.6);
+  border: 1px solid rgba(147, 197, 253, 0.14);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.sec-box span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #f87171;
+  margin-bottom: 4px;
+}
+
+.sec-box strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #fff;
+}
+
+/* =========================================================
+   PRICING SECTION DE LOGIK
+   ========================================================= */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 30px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(8, 34, 62, 0.45), rgba(4, 18, 34, 0.35));
+  border: 1px solid var(--line);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(227, 6, 19, 0.4);
+  box-shadow: 0 25px 50px -15px rgba(1, 8, 16, 0.85);
+}
+
+.pricing-card.featured {
+  background: linear-gradient(180deg, rgba(12, 46, 84, 0.6), rgba(6, 24, 46, 0.5));
+  border-color: rgba(227, 6, 19, 0.5);
+  box-shadow: 0 20px 45px -10px rgba(227, 6, 19, 0.25);
+  transform: scale(1.03);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.03) translateY(-4px);
+  border-color: rgba(227, 6, 19, 0.75);
+  box-shadow: 0 30px 60px -10px rgba(227, 6, 19, 0.45);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, #e30613, #b91c1c);
+  box-shadow: 0 4px 14px rgba(227, 6, 19, 0.4);
+}
+
+.price-val {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 16px 0 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-val span {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.price-features li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+}
+
+.price-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(227, 6, 19, 0.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='3.5'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center / 9px no-repeat;
+  box-shadow: 0 0 0 1px rgba(227, 6, 19, 0.3) inset;
+}
+
+/* Banner CTA Final */
+.cta-band {
+  border-color: rgba(147, 197, 253, 0.2);
+  background: linear-gradient(180deg, rgba(8, 34, 62, 0.45), rgba(4, 18, 34, 0.35));
+}
+
+.cta-glow {
+  background: radial-gradient(ellipse at center, rgba(227, 6, 19, 0.35) 0%, rgba(0, 53, 84, 0.3) 40%, transparent 70%);
+}
+
+.footer {
+  border-top-color: rgba(147, 197, 253, 0.14);
+  background: linear-gradient(180deg, transparent, rgba(6, 26, 48, 0.4));
+}
+
+.footer-mega {
+  background: linear-gradient(180deg, rgba(147, 197, 253, 0.18), rgba(255, 255, 255, 0) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 960px) {
+  .bento-logik {
+    grid-template-columns: 1fr;
+  }
+  .span-4, .span-2, .span-3, .span-6 {
+    grid-column: span 1 !important;
+  }
+  .security-widget {
+    grid-template-columns: 1fr;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+  .pricing-card.featured:hover {
+    transform: translateY(-4px);
+  }
+}

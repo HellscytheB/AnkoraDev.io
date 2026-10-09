@@ -1,0 +1,69 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/kollektor.html",
+        "destination": "/kollektor",
+        "type": 301
+      },
+      {
+        "source": "/naub.html",
+        "destination": "/naub",
+        "type": 301
+      },
+      {
+        "source": "/samau.html",
+        "destination": "/samau",
+        "type": 301
+      },
+      {
+        "source": "/logik.html",
+        "destination": "/logik",
+        "type": 301
+      },
+      {
+        "source": "/politica_privacidad.html",
+        "destination": "/politica_privacidad",
+        "type": 301
+      },
+      {
+        "source": "/eliminar_cuenta.html",
+        "destination": "/eliminar_cuenta",
+        "type": 301
+      },
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|webp|svg|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=604800,immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=86400"
+          }
+        ]
+      }
+    ]
+  }
+}

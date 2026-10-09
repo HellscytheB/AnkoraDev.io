@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Página no encontrada — AnkoraDev">
+  <title>404 — Página no encontrada | AnkoraDev</title>
+  <link rel="icon" type="image/png" href="/logo/firefly.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=20260728n404b">
+  <link rel="stylesheet" href="/css/firefly.css?v=20260728n404b">
+  <style>
+    .err404 {
+      max-width: 640px;
+      margin: 24px auto 64px;
+      padding: 48px 36px 40px;
+      text-align: center;
+      background: rgba(28, 33, 44, 0.94);
+      border: 1px solid rgba(47, 255, 140, 0.16);
+      border-radius: 22px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+    .err404-mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(47, 255, 140, 0.08);
+      border: 1px solid rgba(47, 255, 140, 0.28);
+      box-shadow: 0 0 24px rgba(47, 255, 140, 0.15);
+    }
+    .err404-mark img {
+      width: 36px;
+      height: 36px;
+      display: block;
+    }
+    .err404-code {
+      font-family: "Syne", "Montserrat", sans-serif;
+      font-size: clamp(3.2rem, 10vw, 4.8rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #2fff8c;
+      margin: 0 0 6px;
+      line-height: 1;
+      text-shadow: 0 0 22px rgba(47, 255, 140, 0.22);
+    }
+    .err404 h1 {
+      font-family: "Syne", "Montserrat", sans-serif;
+      font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+      font-weight: 700;
+      color: #f2f6fa;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .err404-lead {
+      color: #b4c0cb;
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin: 0 auto 28px;
+      max-width: 38ch;
+    }
+    .err404-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    a.err404-btn,
+    a.err404-btn:link,
+    a.err404-btn:visited {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none !important;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    a.err404-btn-primary {
+      background: linear-gradient(135deg, #2fff8c, #26d373);
+      color: #12161d !important;
+      box-shadow: 0 6px 18px rgba(47, 255, 140, 0.28);
+    }
+    a.err404-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(47, 255, 140, 0.35);
+    }
+    a.err404-btn-ghost,
+    a.err404-btn-ghost:link,
+    a.err404-btn-ghost:visited {
+      background: transparent;
+      color: #e8eef4 !important;
+      border: 1.5px solid rgba(232, 238, 244, 0.4);
+    }
+    a.err404-btn-ghost:hover {
+      border-color: #2fff8c;
+      color: #2fff8c !important;
+      background: rgba(47, 255, 140, 0.08);
+      transform: translateY(-2px);
+    }
+    .err404-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(47, 255, 140, 0.25), transparent);
+      margin: 0 0 22px;
+    }
+    .err404-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(47, 255, 140, 0.75);
+      margin: 0 0 12px;
+    }
+    .err404-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    a.err404-pill,
+    a.err404-pill:link,
+    a.err404-pill:visited {
+      display: inline-flex;
+      align-items: center;
+      height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #d5dde6 !important;
+      text-decoration: none !important;
+      background: rgba(16, 20, 28, 0.55);
+      border: 1px solid rgba(47, 255, 140, 0.18);
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+    a.err404-pill:hover {
+      color: #2fff8c !important;
+      border-color: rgba(47, 255, 140, 0.45);
+      background: rgba(47, 255, 140, 0.08);
+    }
+    @media (max-width: 600px) {
+      .err404 {
+        margin: 12px 0 40px;
+        padding: 36px 20px 32px;
+      }
+      a.err404-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="ankora-pro">
+  <div class="firefly-container" aria-hidden="true">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+  </div>
+
+  <div class="container">
+    <header class="site-header">
+      <div class="header-left">
+        <a href="/" class="logo-link">
+          <div class="logo">
+            <img src="/logo/firefly.png" alt="Logo AnkoraDev" width="50" height="50">
+          </div>
+        </a>
+        <a href="/" class="brand-link">
+          <div>
+            <div class="brand">AnkoraDev</div>
+            <div class="subtitle">Iluminamos ideas</div>
+          </div>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/kollektor.html" class="nav-link">Kollektor</a>
+        <a href="/naub.html" class="nav-link">Naub</a>
+        <a href="/samau.html" class="nav-link">Samau</a>
+        <a href="/#contacto" class="nav-link">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="err404" role="main">
+      <div class="err404-mark">
+        <img src="/logo/firefly.png" alt="" width="36" height="36">
+      </div>
+      <p class="err404-code" aria-hidden="true">404</p>
+      <h1>Esta página se apagó</h1>
+      <p class="err404-lead">No encontramos esa ruta. Volvamos a la luz: el inicio de AnkoraDev o uno de nuestros productos.</p>
+      <div class="err404-actions">
+        <a href="/" class="err404-btn err404-btn-primary">Volver al inicio</a>
+        <a href="/#contacto" class="err404-btn err404-btn-ghost">Contacto</a>
+      </div>
+      <div class="err404-divider" aria-hidden="true"></div>
+      <p class="err404-label">Explorar</p>
+      <div class="err404-pills">
+        <a class="err404-pill" href="/kollektor.html">Kollektor</a>
+        <a class="err404-pill" href="/naub.html">Naub</a>
+        <a class="err404-pill" href="/samau.html">Samau</a>
+        <a class="err404-pill" href="https://www.naubpost.com/" target="_blank" rel="noopener">naubpost.com</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* Samau product page */
+.samau-page .samau-page-title,
+.samau-page .samau-page-tag,
+.samau-page h2 {
+  font-family: "Syne", "Montserrat", sans-serif;
+}
+
+.samau-hero-page {
+  padding-top: 48px;
+}
+
+.samau-hero-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.samau-hero-copy {
+  text-align: left;
+}
+
+.samau-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.samau-hero-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 137, 123, 0.35);
+}
+
+.samau-page-title {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -1.5px;
+}
+
+.samau-page-tag {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4DB6AC;
+  margin: 0 0 14px;
+}
+
+.samau-page-lead {
+  color: #c5d4d1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 38rem;
+}
+
+.samau-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.samau-hero-panel {
+  background: rgba(0, 40, 36, 0.35);
+  border: 1px solid rgba(0, 137, 123, 0.35);
+  border-radius: 20px;
+  padding: 28px 26px;
+  text-align: left;
+}
+
+.samau-hero-panel h2 {
+  color: #4DB6AC;
+  font-size: 1.35rem;
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.samau-hero-panel > p {
+  color: #b8c8c4;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+.samau-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.samau-checklist li {
+  position: relative;
+  padding: 8px 0 8px 22px;
+  color: #e0ebe9;
+  font-weight: 600;
+}
+
+.samau-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4DB6AC;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(77, 182, 172, 0.5);
+}
+
+.samau-audience {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.samau-audience article {
+  background: rgba(0, 40, 36, 0.28);
+  border: 1px solid rgba(0, 137, 123, 0.22);
+  border-radius: 16px;
+  padding: 22px 20px;
+}
+
+.samau-audience h3 {
+  color: #4DB6AC;
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.samau-audience p {
+  margin: 0;
+  color: #b8c8c4;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.samau-cta-block {
+  text-align: center;
+}
+
+.samau-page .hamburger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .samau-page .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .samau-hero-row,
+  .samau-audience {
+    grid-template-columns: 1fr;
+  }
+
+  .samau-hero-copy,
+  .samau-hero-brand,
+  .samau-hero-cta {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .samau-page-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

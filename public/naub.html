@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Naub es la plataforma SaaS de AnkoraDev para gestionar redes sociales con Inteligencia Artificial. Genera contenido, programa en Instagram, Facebook y WhatsApp, y colabora con tu equipo.">
+  <meta name="keywords" content="Naub, redes sociales con IA, generador de contenido IA, programador Instagram Facebook, WhatsApp marketing, SaaS redes sociales, AnkoraDev, naubpost">
+  <meta name="author" content="AnkoraDev">
+  <meta name="theme-color" content="#070814">
+  <title>Naub — Gestión de Redes Sociales con IA | AnkoraDev</title>
+  <link rel="canonical" href="https://ankoradev.io/naub">
+  <link rel="alternate" hreflang="es" href="https://ankoradev.io/naub">
+  <link rel="alternate" hreflang="x-default" href="https://ankoradev.io/naub">
+
+  <meta property="og:site_name" content="AnkoraDev">
+  <meta property="og:title" content="Naub — Gestión de Redes Sociales con IA">
+  <meta property="og:description" content="Genera contenido con IA, programa en Instagram, Facebook y WhatsApp, y escala tu agencia o marca desde un solo lugar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ankoradev.io/naub">
+  <meta property="og:image" content="https://ankoradev.io/logo/naub_logo_square.png">
+  <meta property="og:image:alt" content="Logo de Naub">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Naub — Redes Sociales con Inteligencia Artificial">
+  <meta name="twitter:description" content="SaaS de AnkoraDev para creadores, marcas y agencias. Automatización, IA y programación omnicanal.">
+  <meta name="twitter:image" content="https://ankoradev.io/logo/naub_logo_square.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/firefly.png">
+  <link rel="shortcut icon" href="logo/firefly.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css?v=20261009v6">
+  <link rel="stylesheet" href="css/naub-theme.css?v=20261009ai2">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- Capas de ambiente y Motion Graphics de nueva generación -->
+  <canvas id="fireflies" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+  <!-- NAV FLOTANTE -->
+  <header class="nav-wrap" id="nav-wrap">
+    <nav class="nav" aria-label="Navegación Naub">
+      <a href="/" class="nav-brand" title="Volver a AnkoraDev">
+        <img src="logo/naub_logo_square.webp" alt="Logo Naub" width="28" height="28" style="border-radius: 8px;">
+        <span>Naub</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#funciones">Funciones</a>
+        <a href="#comparativa">Ventajas</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            <span>Productos</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="/kollektor" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/logo_kollektor.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Kollektor <span class="ndi-badge badge-green">App</span></div>
+                <p class="ndi-desc">Cobro diario, rutas con mapa y cartera</p>
+              </div>
+            </a>
+            <a href="/naub" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/naub_logo_square.webp" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Naub <span class="ndi-badge badge-indigo">SaaS IA</span></div>
+                <p class="ndi-desc">Redes sociales, WhatsApp y automatización</p>
+              </div>
+            </a>
+            <a href="/samau" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="img/samau-logo.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">Samau <span class="ndi-badge badge-teal">JAC</span></div>
+                <p class="ndi-desc">Censo comunitario y gestión Ley 2166</p>
+              </div>
+            </a>
+            <a href="/logik" class="nav-dropdown-item">
+              <div class="ndi-icon">
+                <img src="logo/logik_icon.png" alt="" width="22" height="22">
+              </div>
+              <div class="ndi-text">
+                <div class="ndi-title">LoGiK <span class="ndi-badge badge-red">Logística</span></div>
+                <p class="ndi-desc">Red y bolsa de empleo de transporte de carga</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="#planes">Planes</a>
+        <a href="#faq">Preguntas</a>
+        <a href="/">← AnkoraDev</a>
+      </div>
+      <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="nav-cta magnetic"><span>Abrir Naub</span> <span aria-hidden="true">→</span></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="pill reveal">
+            <span class="pill-dot"></span>
+            Plataforma SaaS en vivo · naubpost.com
+            <span class="pill-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <h1 class="hero-title split">
+            El comando definitivo para <em class="shine">redes sociales con IA</em>.
+          </h1>
+
+          <p class="hero-lead reveal" style="--d:.5s">
+            Naub revoluciona la gestión de marcas digitales: <strong>creación asistida por IA</strong> (Gemini, OpenAI y DeepSeek), programación omnicanal en <strong>Facebook, Instagram y WhatsApp</strong>, y flujos multi-equipo desde un panel centralizado de alto impacto.
+          </p>
+
+          <div class="hero-cta reveal" style="--d:.65s">
+            <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="btn btn-primary magnetic">
+              <span>Comenzar Gratis en Naub</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#planes" class="btn btn-ghost magnetic">
+              Ver Planes y Precios
+            </a>
+          </div>
+
+          <ul class="hero-meta reveal" style="--d:.8s">
+            <li><span class="mono">01</span> Multi-red: FB, IG &amp; WhatsApp</li>
+            <li><span class="mono">02</span> Motores IA de última generación</li>
+            <li><span class="mono">03</span> Workspaces &amp; Modo Agencia</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.35s" id="hero-visual">
+          <div class="orbit orbit-1" aria-hidden="true"><i></i></div>
+          <div class="orbit orbit-2" aria-hidden="true"><i></i></div>
+          <div class="orbit orbit-3" aria-hidden="true"><i></i></div>
+          <div class="hero-halo" aria-hidden="true"></div>
+
+          <!-- DASHBOARD FRAME INTERACTIVO -->
+          <div class="dashboard-frame tilt" data-depth="1">
+            <div class="dashboard-header">
+              <div class="dash-dots">
+                <i></i><i></i><i></i>
+              </div>
+              <span class="dash-badge">● WORKSPACE: AGENCIA ANKORA</span>
+            </div>
+
+            <div class="dash-channels">
+              <div class="ch-pill active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Instagram
+              </div>
+              <div class="ch-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+              </div>
+              <div class="ch-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </div>
+            </div>
+
+            <div class="dash-post-preview">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 0.76rem; color: #38bdf8; font-family: var(--font-mono); font-weight: 600;">✨ COPY GENERADO CON GEMINI 1.5</span>
+                <span style="font-size: 0.72rem; color: #10b981; background: rgba(16,185,129,0.15); padding: 2px 8px; border-radius: 6px;">Programado</span>
+              </div>
+              <p>
+                "🚀 Escalar tu marca no se trata de trabajar más horas, sino de optimizar cada punto de contacto. Descubre cómo nuestra comunidad ahorra +15h semanales automatizando sus publicaciones con IA..."
+              </p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span style="font-size: 0.72rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 3px 8px; border-radius: 4px;">#ProductividadDigital</span>
+                <span style="font-size: 0.72rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 3px 8px; border-radius: 4px;">#InteligenciaArtificial</span>
+                <span style="font-size: 0.72rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 3px 8px; border-radius: 4px;">#NaubSaaS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Tarjetas Flotantes -->
+          <div class="float-card fc-1" data-depth="2.2">
+            <span class="fc-icon fc-cyan" style="color: #38bdf8; background: rgba(56,189,248,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </span>
+            <div><strong>Copy generado con IA</strong><small>3 variantes optimizadas</small></div>
+          </div>
+          <div class="float-card fc-2" data-depth="3">
+            <span class="fc-icon fc-indigo" style="color: #818cf8; background: rgba(129,140,248,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </span>
+            <div><strong>Difusión WhatsApp masiva</strong><small>240 clientes entregados</small></div>
+          </div>
+          <div class="float-card fc-3" data-depth="1.6">
+            <span class="fc-icon fc-green" style="color: #10b981; background: rgba(16,185,129,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div><strong>Publicación sincronizada</strong><small>Facebook &amp; Instagram listos</small></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#funciones" class="scroll-hint" aria-label="Bajar a Funciones">
+        <span class="mouse"><i></i></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Generación de contenido con IA</span><b>✦</b><span>Programación Instagram &amp; Facebook</span><b>✦</b><span>Campañas masivas WhatsApp</span><b>✦</b><span>Modo Agencia</span><b>✦</b><span>Workspaces independientes</span><b>✦</b><span>RSS Autoposting</span><b>✦</b>
+        <span>Generación de contenido con IA</span><b>✦</b><span>Programación Instagram &amp; Facebook</span><b>✦</b><span>Campañas masivas WhatsApp</span><b>✦</b><span>Modo Agencia</span><b>✦</b><span>Workspaces independientes</span><b>✦</b><span>RSS Autoposting</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ESTADÍSTICAS / MÉTRICAS -->
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 01</span> Rendimiento y Eficiencia</p>
+          <h2 class="title reveal">Automatización diseñada para hacerte ahorrar 20 horas por semana.</h2>
+        </header>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat-num"><span data-count="3" data-dec="1">3.0</span>x</div>
+            <div class="stat-lbl">Velocidad de creación</div>
+            <p class="stat-desc">Copys, ganchos virales y variantes listas en segundos sin bloqueos creativos.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num">+<span data-count="100">100</span>k</div>
+            <div class="stat-lbl">Posts generados</div>
+            <p class="stat-desc">Publicaciones impulsadas por algoritmos inteligentes y programadas con precisión.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="3">3</span> Redes</div>
+            <div class="stat-lbl">Canales principales</div>
+            <p class="stat-desc">Instagram, Facebook y WhatsApp unificados en una sola consola operativa.</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="99" data-dec="9">99.9</span>%</div>
+            <div class="stat-lbl">Uptime de programación</div>
+            <p class="stat-desc">Tus publicaciones se envían con puntualidad militar aunque tu equipo esté desconectado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID: FUNCIONES PRINCIPALES -->
+    <section id="funciones" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 02</span> Arquitectura de Naub</p>
+          <h2 class="title reveal">Todo lo que necesitas para escalar tu presencia en redes.</h2>
+          <p class="lead reveal">Desde generación asistida por modelos de vanguardia hasta colaboración multicliente con permisos granulares.</p>
+        </header>
+
+        <div class="bento-naub">
+          <!-- BENTO 1: IA MULTI-MODELO (SPAN 4) -->
+          <article class="bento-card span-4 reveal">
+            <span class="card-tag">Inteligencia Artificial</span>
+            <h3>Motores IA de última generación (OpenAI, Gemini &amp; DeepSeek)</h3>
+            <p>
+              Genera copys persuasivos, llamadas a la acción irresistibles, carruseles educativos y etiquetas optimizadas por nicho. Conecta tu propia API key o utiliza el motor integrado para producir sin límites.
+            </p>
+
+            <div class="ai-generator-widget">
+              <div class="ai-widget-header">
+                <div class="ai-model-tabs">
+                  <span class="ai-tab active">Gemini 1.5 Pro</span>
+                  <span class="ai-tab">GPT-4o</span>
+                  <span class="ai-tab">DeepSeek V3</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981;">● TIEMPO: 1.2s</span>
+              </div>
+              <div class="ai-prompt-box">
+                <span style="color: #38bdf8;">✦ Prompt:</span> "Crea un gancho viral sobre automatización en Instagram con llamada a la acción hacia WhatsApp..."
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 2: WHATSAPP MASIVO (SPAN 2) -->
+          <article class="bento-card span-2 reveal" style="--d:.1s">
+            <span class="card-tag">Conversaciones</span>
+            <h3>WhatsApp Masivo</h3>
+            <p>
+              Mensajes programados y difusiones con fotos o documentos directamente a tus listas segmentadas.
+            </p>
+
+            <div class="wa-widget">
+              <div class="wa-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                CAMPAÑA PROGRAMADA
+              </div>
+              <div class="wa-msg">
+                "Hola Carlos! 👋 Ya está disponible tu reporte mensual. Haz clic para descargarlo..."
+                <div class="wa-msg-meta">18:00 ✓✓</div>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 3: CALENDARIO VISUAL (SPAN 3) -->
+          <article class="bento-card span-3 reveal" style="--d:.15s">
+            <span class="card-tag">Omnicanal</span>
+            <h3>Programación visual en Instagram y Facebook</h3>
+            <p>
+              Planifica tu cuadrícula con un calendario interactivo drag &amp; drop. Sube imágenes, carruseles y reels sincronizados sin errores de publicación.
+            </p>
+
+            <div class="cal-widget">
+              <div class="cal-strip">
+                <div class="cal-col">
+                  <div class="cal-day">Lun</div>
+                  <div class="cal-item" style="color: #38bdf8;">Carrusel</div>
+                </div>
+                <div class="cal-col active">
+                  <div class="cal-day" style="color: #818cf8;">Mar</div>
+                  <div class="cal-item" style="color: #c084fc;">Reel IA</div>
+                </div>
+                <div class="cal-col">
+                  <div class="cal-day">Mié</div>
+                  <div class="cal-item" style="color: #10b981;">WA List</div>
+                </div>
+                <div class="cal-col">
+                  <div class="cal-day">Jue</div>
+                  <div class="cal-item" style="color: #38bdf8;">Post FB</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 4: WORKSPACES Y ROLES (SPAN 3) -->
+          <article class="bento-card span-3 reveal" style="--d:.2s">
+            <span class="card-tag">Equipos</span>
+            <h3>Multi-Workspace &amp; Modo Agencia</h3>
+            <p>
+              Aísla clientes y marcas con espacios independientes. Asigna redactores, revisores y clientes con permisos para aprobar borradores con un solo clic.
+            </p>
+
+            <div class="approval-widget">
+              <div class="app-step done">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                Redacción
+              </div>
+              <span style="color: var(--line-2);">→</span>
+              <div class="app-step done">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                Revisión
+              </div>
+              <span style="color: var(--line-2);">→</span>
+              <div class="app-step active">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #38bdf8; display: inline-block;"></span>
+                Aprobado
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- BENTO 5: RSS AUTOPOSTING EN CADENA (SPAN 6) -->
+          <article class="bento-card span-6 reveal" style="--d:.25s">
+            <span class="card-tag">Piloto Automático</span>
+            <h3>Fuentes RSS automáticas: de tu blog a redes sin mover un dedo</h3>
+            <p>
+              Conecta los blogs o canales de noticias de tu sector y deja que Naub detecte nuevos artículos, sintetice los puntos clave con IA y programe publicaciones optimizadas.
+            </p>
+
+            <div class="pipeline-widget">
+              <div class="pipe-box">
+                <span style="display: block; font-size: 0.7rem; color: #94a3b8; font-family: var(--font-mono);">01. FUENTE</span>
+                <strong>Feed RSS / Blog</strong>
+              </div>
+              <div class="pipe-arrow">→</div>
+              <div class="pipe-box" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
+                <span style="display: block; font-size: 0.7rem; color: #38bdf8; font-family: var(--font-mono);">02. PROCESAMIENTO IA</span>
+                <strong>Resumen + Copy persuasivo + Hashtags</strong>
+              </div>
+              <div class="pipe-arrow">→</div>
+              <div class="pipe-box" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+                <span style="display: block; font-size: 0.7rem; color: #10b981; font-family: var(--font-mono);">03. PUBLICACIÓN</span>
+                <strong>Instagram, FB &amp; WhatsApp</strong>
+              </div>
+            </div>
+            <div class="card-bg-glow" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVA REDISEÑADA: SIN NAUB VS CON NAUB -->
+    <section id="comparativa" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 03</span> Impacto Operativo</p>
+          <h2 class="title reveal">La diferencia entre el caos manual y la claridad de Naub.</h2>
+          <p class="lead reveal">Compara cómo gestionan hoy la mayoría de creadores frente a la velocidad de operar con un SaaS integrado.</p>
+        </header>
+
+        <div class="comp-grid reveal">
+          <!-- SIN NAUB -->
+          <div class="comp-card bad">
+            <span class="comp-badge bad">✕ Método Tradicional (Fragmentado)</span>
+            <h3>Sin Naub</h3>
+
+            <ul class="comp-list">
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>6 herramientas abiertas a la vez</strong>
+                  <p>Saltando entre ChatGPT, Canva, Meta Business Suite, blocs de notas y WhatsApp Web.</p>
+                </div>
+                <span class="comp-tag bad">-5 hrs/sem</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Bloqueo creativo continuo</strong>
+                  <p>Redactar cada copy, gancho y hashtag desde cero genera fatiga y falta de constancia.</p>
+                </div>
+                <span class="comp-tag bad">Lento</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Riesgo de error entre marcas</strong>
+                  <p>Publicar accidentalmente en la cuenta de Instagram equivocada de otro cliente.</p>
+                </div>
+                <span class="comp-tag bad">Crítico</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✕</span>
+                <div class="comp-row-content">
+                  <strong>Aprobaciones caóticas por WhatsApp</strong>
+                  <p>Clientes respondiendo tarde, imágenes perdidas en chats y versiones desactualizadas.</p>
+                </div>
+                <span class="comp-tag bad">Desorden</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CON NAUB -->
+          <div class="comp-card good">
+            <span class="comp-badge good">✓ Ecosistema Inteligente Naub</span>
+            <h3>Con Naub</h3>
+
+            <ul class="comp-list">
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>1 solo centro de mando unificado</strong>
+                  <p>Todas tus marcas, redes y campañas en una consola rápida y sincronizada.</p>
+                </div>
+                <span class="comp-tag good">1 Pestaña</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Generación instantánea con IA</strong>
+                  <p>Gemini, GPT-4o y DeepSeek crean semanas de contenido en cuestión de segundos.</p>
+                </div>
+                <span class="comp-tag good">3x Rápido</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Workspaces 100% aislados</strong>
+                  <p>Cuentas, credenciales y bibliotecas separadas por cliente sin riesgo de cruces.</p>
+                </div>
+                <span class="comp-tag good">0 Errores</span>
+              </li>
+
+              <li class="comp-row">
+                <span class="comp-row-icon">✓</span>
+                <div class="comp-row-content">
+                  <strong>Portal de aprobación para agencias</strong>
+                  <p>Tus redactores cargan borradores y los clientes aprueban formalmente con un clic.</p>
+                </div>
+                <span class="comp-tag good">Control Total</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PLANES Y PRECIOS -->
+    <section id="planes" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 04</span> Inversión Transparente</p>
+          <h2 class="title reveal">Empieza gratis. Escala cuando tu volumen crezca.</h2>
+          <p class="lead reveal">Sin contratos forzosos. Cancela o cambia de plan en cualquier momento directamente desde tu panel.</p>
+        </header>
+
+        <div class="pricing-grid reveal">
+          <!-- STARTER -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.4rem; margin: 0 0 8px; color: #fff;">Starter</h3>
+            <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Para creadores y pequeños negocios que inician su presencia digital.</p>
+            <div class="price-val">Gratis</div>
+            <ul class="price-features">
+              <li>1 Workspace activo</li>
+              <li>2 Canales sociales conectados</li>
+              <li>Programación básica de publicaciones</li>
+              <li>Generación con IA (usando tu propia API Key)</li>
+              <li>Previsualización en tiempo real</li>
+            </ul>
+            <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="btn btn-ghost magnetic" style="width: 100%; justify-content: center;">
+              Empezar Gratis
+            </a>
+          </div>
+
+          <!-- PRO (DESTACADO) -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge">MÁS POPULAR</span>
+            <h3 style="font-size: 1.4rem; margin: 0 0 8px; color: #fff;">Pro</h3>
+            <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Para profesionales, marcas en crecimiento y creadores intensivos.</p>
+            <div class="price-val">$29 <span>/ mes</span></div>
+            <ul class="price-features">
+              <li>5 Workspaces independientes</li>
+              <li>Canales sociales ilimitados</li>
+              <li>Fuentes RSS automáticas con IA</li>
+              <li>Equipo de hasta 5 colaboradores</li>
+              <li>WhatsApp multi-sesión y envíos masivos</li>
+              <li>Soporte prioritario</li>
+            </ul>
+            <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="btn btn-primary magnetic" style="width: 100%; justify-content: center;">
+              <span>Comenzar Prueba Pro</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <!-- AGENCIA -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.4rem; margin: 0 0 8px; color: #fff;">Agencia</h3>
+            <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Para agencias de marketing y corporaciones con múltiples clientes.</p>
+            <div class="price-val">$79 <span>/ mes</span></div>
+            <ul class="price-features">
+              <li>Workspaces ilimitados</li>
+              <li>Miembros de equipo y clientes ilimitados</li>
+              <li>Portal de aprobación de clientes</li>
+              <li>Módulo de facturación y gestión</li>
+              <li>WhatsApp API dedicado</li>
+              <li>Gestor de cuenta y onboarding 1 a 1</li>
+            </ul>
+            <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="btn btn-ghost magnetic" style="width: 100%; justify-content: center;">
+              Contactar / Activar
+            </a>
+          </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 32px; font-size: 0.88rem; color: var(--muted);" class="reveal">
+          Precios actualizados y especificaciones completas en <a href="https://www.naubpost.com/" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">naubpost.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span>// 05</span> Dudas habituales</p>
+          <h2 class="title reveal">Preguntas frecuentes sobre Naub.</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Qué modelos de Inteligencia Artificial integra Naub?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Naub es compatible con los mejores modelos del mercado: Google Gemini (1.5 Pro y Flash), OpenAI (GPT-4o y GPT-4o mini) y DeepSeek. Puedes utilizar el servicio provisto por Naub o conectar tu propia API key para máxima personalización y costo reducido.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Cómo funciona la programación en WhatsApp?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Puedes conectar tu sesión de WhatsApp mediante escaneo QR seguro. Una vez vinculada, puedes programar mensajes individuales, difusiones masivas segmentadas o avisos con archivos adjuntos e imágenes hacia tus grupos y listas de contactos.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Puedo gestionar múltiples marcas o clientes?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>Totalmente. Gracias al sistema de <strong>Workspaces</strong>, cada marca o cliente tiene sus propias cuentas conectadas, su biblioteca de medios y sus roles de equipo, evitando cualquier riesgo de confusión o publicación cruzada.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>¿Necesito tarjeta de crédito para comenzar?</span>
+              <i class="faq-arrow" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-a">
+              <p>No. El plan Starter es 100% gratuito y no requiere ingresar tarjeta de crédito. Puedes registrarte en <a href="https://www.naubpost.com/" target="_blank" rel="noopener" style="color: #38bdf8;">naubpost.com</a> y comenzar a usar las herramientas de inmediato.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDA CTA FINAL -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <span class="card-tag">Empezar hoy</span>
+          <h2>¿Listo para iluminar y automatizar tus redes sociales?</h2>
+          <p>Únete a marcas y agencias que ya operan con máxima velocidad e inteligencia. Crea tu cuenta gratuita en minutos.</p>
+          <div class="hero-cta center">
+            <a href="https://www.naubpost.com/" target="_blank" rel="noopener" class="btn btn-primary magnetic">
+              <span>Crear Cuenta en Naub</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Naub" target="_blank" rel="noopener" class="btn btn-ghost magnetic">
+              Hablar con un Asesor
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="nav-brand">
+            <img src="logo/naub_logo_square.webp" alt="Naub" width="32" height="32" loading="lazy" style="border-radius: 8px;">
+            <span>Naub</span>
+          </a>
+          <p>Plataforma SaaS de automatización y gestión de redes sociales con Inteligencia Artificial. Creado y mantenido por AnkoraDev.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <a href="#funciones">Funciones</a>
+          <a href="#planes">Planes</a>
+          <a href="#faq">Preguntas</a>
+          <a href="https://www.naubpost.com/" target="_blank" rel="noopener">naubpost.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ecosistema Ankora</h4>
+          <a href="/">AnkoraDev</a>
+          <a href="/kollektor">Kollektor</a>
+          <a href="/samau">Samau</a>
+          <a href="/logik">LoGiK</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:soporte@naubpost.com">soporte@naubpost.com</a>
+          <a href="https://wa.me/573151029805" target="_blank" rel="noopener">WhatsApp Oficial</a>
+        </div>
+      </div>
+      <div class="footer-mega" aria-hidden="true">NAUB</div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> AnkoraDev · Naub SaaS</span>
+        <a href="https://www.naubpost.com/" target="_blank" rel="noopener">Visitar naubpost.com →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante con pulso -->
+  <a href="https://wa.me/573151029805?text=Hola%2C%20quiero%20conocer%20Naub" class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.59 2 2.19 6.4 2.19 11.85c0 2.1.62 4.05 1.8 5.72L2 22l4.6-1.52a10.8 10.8 0 0 0 5.44 1.47c5.45 0 9.85-4.4 9.85-9.85C21.9 6.4 17.5 2 12.04 2Zm0 17.86c-1.74 0-3.36-.53-4.72-1.44l-.34-.22-2.72.9.9-2.64-.23-.35a8.03 8.03 0 1 1 7.1 3.75Zm4.38-5.41c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.42-1.34-1.66-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 .02 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.12 3.64.58.25 1.02.4 1.36.51.57.18 1.08.16 1.49.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+  </a>
+
+  <!-- Motor Motion Graphics Compartido (60 FPS, ultra fluido) -->
+  <script src="js/home.js?v=20261009v5" defer></script>
+
+  <!-- JSON-LD SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Naub",
+    "alternateName": ["Naub SaaS", "Naubpost", "Naub AnkoraDev"],
+    "operatingSystem": "Web",
+    "applicationCategory": "BusinessApplication",
+    "description": "Plataforma SaaS para gestionar redes sociales con IA: generación de contenido con OpenAI, Gemini y DeepSeek, programación multicanal y WhatsApp.",
+    "keywords": "gestión de redes sociales con IA, generador de posts IA, programación Instagram Facebook, WhatsApp masivo",
+    "url": "https://www.naubpost.com/",
+    "author": {
+      "@type": "Organization",
+      "name": "AnkoraDev",
+      "url": "https://ankoradev.io/"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "29",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Agencia",
+        "price": "79",
+        "priceCurrency": "USD"
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
