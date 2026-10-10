@@ -25,10 +25,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="logo/firefly.png">
   <link rel="shortcut icon" href="logo/firefly.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=20261009v6">
+  <link rel="stylesheet" href="/css/fonts.css?v=20261010a">
+  <link rel="stylesheet" href="css/home.css?v=20261010a">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -331,7 +329,7 @@
               </div>
             </div>
             <div class="b-visual" aria-hidden="true" style="min-height: auto; align-items: center;">
-              <img src="img/logik-feature.png" alt="Plataforma LoGiK" style="width: 100%; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,0,0,0.7); border: 1px solid rgba(147,197,253,0.18);">
+              <img src="img/logik-feature.png" alt="Plataforma LoGiK" width="640" height="800" style="width: min(100%, 420px); height: auto; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,0,0,0.7); border: 1px solid rgba(147,197,253,0.18);">
             </div>
           </article>
 
@@ -402,11 +400,15 @@
               <textarea id="mensaje" name="mensaje" rows="5" placeholder=" " required></textarea>
               <label for="mensaje">Cuéntanos la idea que quieres iluminar…</label>
             </div>
+            <div class="consent">
+              <input type="checkbox" id="autorizo" name="autorizo" required>
+              <label for="autorizo">Autorizo a AnkoraDev a usar mi nombre y contacto solo para responder esta solicitud. El mensaje se abre en WhatsApp y no se guarda en nuestros servidores.</label>
+            </div>
+            <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar. El detalle del tratamiento está en la <a href="/politica_privacidad">política de privacidad</a>.</p>
             <button type="submit" class="btn btn-primary btn-block magnetic">
               <span>Enviar por WhatsApp</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
             </button>
-            <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -441,7 +443,10 @@
         <div class="footer-col">
           <h4>Legales</h4>
           <a href="/politica_privacidad">Política de Privacidad</a>
+          <a href="/politica_cookies">Política de Cookies</a>
+          <a href="/terminos">Términos del sitio</a>
           <a href="/eliminar_cuenta">Eliminar Cuenta</a>
+          <a href="mailto:contacto@ankoradev.io?subject=Habeas%20Data">Habeas data</a>
         </div>
       </div>
       <div class="footer-mega" aria-hidden="true">AnkoraDev</div>
@@ -498,6 +503,6 @@
   }
   </script>
 
-  <script src="js/home.js?v=20261009v5" defer></script>
+  <script src="js/home.js?v=20261010a" defer></script>
 </body>
 </html>

@@ -109,18 +109,36 @@
 
   var toggle = document.getElementById('nav-toggle');
   var links = document.getElementById('nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      var open = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        links.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+
+  function closeMenu() {
+    if (!links || !toggle) return;
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('nav-open');
+    document.querySelectorAll('.nav-dropdown.open').forEach(function (dd) {
+      dd.classList.remove('open');
+      var tr = dd.querySelector('.nav-dropdown-trigger');
+      if (tr) tr.setAttribute('aria-expanded', 'false');
     });
   }
+
+  if (toggle && links) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      document.body.classList.toggle('nav-open', open);
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { closeMenu(); });
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
 
   /* Dropdown interactivo de productos */
   document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
@@ -138,6 +156,10 @@
   });
 
   document.addEventListener('click', function (e) {
+    if (links && links.classList.contains('open') && !e.target.closest('#nav-links') && !e.target.closest('#nav-toggle')) {
+      closeMenu();
+      return;
+    }
     if (!e.target.closest('.nav-dropdown')) {
       document.querySelectorAll('.nav-dropdown.open').forEach(function (dd) {
         dd.classList.remove('open');
@@ -361,8 +383,14 @@
       var nombre = (document.getElementById('nombre').value || '').trim();
       var email = (document.getElementById('email').value || '').trim();
       var mensaje = (document.getElementById('mensaje').value || '').trim();
+      var autorizo = document.getElementById('autorizo');
       if (!nombre || !email || !mensaje) {
         if (statusEl) statusEl.textContent = 'Completa todos los campos.';
+        return;
+      }
+      if (autorizo && !autorizo.checked) {
+        if (statusEl) statusEl.textContent = 'Necesitamos tu autorización para usar estos datos y responderte.';
+        autorizo.focus();
         return;
       }
       var text = 'Hola AnkoraDev, soy ' + nombre + '.\nContacto: ' + email + '\n\n' + mensaje;
@@ -374,4 +402,30 @@
   /* ---------- 12. Año dinámico ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- 13. Canal de habeas data en el pie ---------- */
+  document.querySelectorAll('.footer .wrap').forEach(function (wrap) {
+    if (wrap.querySelector('.footer-habeas')) return;
+    var p = document.createElement('p');
+    p.className = 'footer-habeas';
+    p.innerHTML = 'Responsable del tratamiento en este sitio: <strong>AnkoraDev</strong> (Colombia). Canal de habeas data: <a href="mailto:contacto@ankoradev.io?subject=Habeas%20Data">contacto@ankoradev.io</a>. Respondemos en máximo 10 días hábiles. También puedes acudir a la Superintendencia de Industria y Comercio.';
+    wrap.appendChild(p);
+  });
+
+  /* ---------- 14. Aviso de cookies técnicas ---------- */
+  var cookieKey = 'ankora-aviso-cookies';
+  try {
+    if (!localStorage.getItem(cookieKey)) {
+      var bar = document.createElement('div');
+      bar.className = 'cookie-bar';
+      bar.setAttribute('role', 'dialog');
+      bar.setAttribute('aria-label', 'Aviso de cookies');
+      bar.innerHTML = '<p>Este sitio solo usa almacenamiento técnico para recordar que cerraste este aviso. No usamos cookies de analítica ni de publicidad. <a href="/politica_cookies">Política de cookies</a>.</p><button type="button" class="btn btn-primary" data-cookie-ok>Entendido</button>';
+      document.body.appendChild(bar);
+      bar.querySelector('[data-cookie-ok]').addEventListener('click', function () {
+        localStorage.setItem(cookieKey, '1');
+        bar.remove();
+      });
+    }
+  } catch (err) { /* almacenamiento bloqueado: el aviso se puede ignorar */ }
 })();

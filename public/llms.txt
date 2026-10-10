@@ -8,6 +8,16 @@
 - [Naub](https://ankoradev.io/naub.html): SaaS de gestión de redes sociales con IA (contenido, programación, WhatsApp, equipos). Plataforma: https://www.naubpost.com/
 - [Samau](https://ankoradev.io/samau.html): Plataforma para digitalizar Juntas de Acción Comunal (JAC) en Colombia (censo, trámites, transparencia). Fase piloto.
 
+- [LoGiK](https://ankoradev.io/logik): Bolsa de empleo y red profesional del transporte de carga en Colombia, con verificación KYC (RUNT, SIMIT y antecedentes).
+
+## Legales
+
+- Privacidad y habeas data: https://ankoradev.io/politica_privacidad
+- Cookies: https://ankoradev.io/politica_cookies
+- Términos del sitio: https://ankoradev.io/terminos
+- Eliminar cuenta: https://ankoradev.io/eliminar_cuenta
+- Canal de datos: contacto@ankoradev.io
+
 ## Empresa
 
 - Sitio: https://ankoradev.io/

@@ -25,10 +25,28 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ankoradev.io/logik</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://ankoradev.io/politica_privacidad</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ankoradev.io/politica_cookies</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ankoradev.io/terminos</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ankoradev.io/eliminar_cuenta</loc>

@@ -34,9 +34,19 @@
         "destination": "/politica_privacidad",
         "type": 301
       },
-      {
+        {
         "source": "/eliminar_cuenta.html",
         "destination": "/eliminar_cuenta",
+        "type": 301
+      },
+      {
+        "source": "/politica_cookies.html",
+        "destination": "/politica_cookies",
+        "type": 301
+      },
+      {
+        "source": "/terminos.html",
+        "destination": "/terminos",
         "type": 301
       },
       {
@@ -56,7 +66,7 @@
         ]
       },
       {
-        "source": "**/*.@(css|js)",
+        "source": "**/*.@(css|js|woff2)",
         "headers": [
           {
             "key": "Cache-Control",
