@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ankoradev-c97ff",
     "public": "public",
     "ignore": [
       "firebase.json",

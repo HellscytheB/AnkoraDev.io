@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "kollektor-app",
-    "production": "kollektor-app"
+    "default": "ankoradev-c97ff",
+    "production": "ankoradev-c97ff"
   },
   "targets": {},
   "etags": {}
