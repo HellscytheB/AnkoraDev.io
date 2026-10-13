@@ -394,11 +394,11 @@
       var mensaje = (document.getElementById('mensaje').value || '').trim();
       var autorizo = document.getElementById('autorizo');
       if (!nombre || !email || !mensaje) {
-        if (statusEl) statusEl.textContent = 'Completa todos los campos.';
+        if (statusEl) statusEl.textContent = 'Complete todos los campos.';
         return;
       }
       if (autorizo && !autorizo.checked) {
-        if (statusEl) statusEl.textContent = 'Necesitamos tu autorización para usar estos datos y responderte.';
+        if (statusEl) statusEl.textContent = 'Necesitamos su autorización para usar estos datos y responderle.';
         autorizo.focus();
         return;
       }
