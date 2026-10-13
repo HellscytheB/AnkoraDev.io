@@ -2,6 +2,11 @@
 (function () {
   'use strict';
 
+  // Si el respaldo CSS (2.5 s) ya mostró el contenido, no volver a ocultarlo
+  var lateStart = window.performance && performance.now() > 2400;
+  if (lateStart) {
+    document.querySelectorAll('.reveal, .split').forEach(function (el) { el.classList.add('in'); });
+  }
   document.documentElement.classList.add('js-ready');
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -47,7 +52,7 @@
 
   /* ---------- 2. Revelado al hacer scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .split');
-  if ('IntersectionObserver' in window && !reduceMotion) {
+  if ('IntersectionObserver' in window && !reduceMotion && !lateStart) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
