@@ -1621,7 +1621,7 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
    Responsive
    ========================================================= */
 @media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 40px; text-align: center; }
   .hero-lead { margin-left: auto; margin-right: auto; }
   .hero-cta, .hero-meta { justify-content: center; }
   .hero-visual { max-width: 460px; margin: 0 auto; width: 100%; }
