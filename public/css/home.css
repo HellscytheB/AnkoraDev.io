@@ -642,7 +642,7 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
   font-family: var(--font-sans);
   font-size: clamp(2.8rem, 6.4vw, 5.6rem);
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.06;
   letter-spacing: -.045em;
   margin: 0 0 28px;
   color: var(--ink);
@@ -1624,8 +1624,9 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-bottom: .12em;
-  margin-bottom: -.12em;
+  /* Holgura para tildes, ¿? y la cursiva, que se salen de la caja de la letra */
+  padding: .14em .18em .16em;
+  margin: -.14em -.18em -.16em;
 }
 
 .split .w > span {

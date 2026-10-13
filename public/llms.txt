@@ -7,7 +7,7 @@
 - [Kollektor](https://ankoradev.io/kollektor): App Android para cobro diario, créditos diarios, rutas de cobradores y gestión de cartera en Colombia. Disponible en Google Play: https://play.google.com/store/apps/details?id=com.ankora.kollektor
 - [Naub](https://ankoradev.io/naub): SaaS de gestión de redes sociales con IA (contenido, programación, WhatsApp, equipos). Plataforma: https://www.naubpost.com/
 - [Samau](https://ankoradev.io/samau): Plataforma para digitalizar Juntas de Acción Comunal (JAC) en Colombia (censo, trámites, transparencia). Fase piloto.
-- [LoGiK](https://ankoradev.io/logik): Bolsa de empleo y red profesional del transporte de carga en Colombia, con verificación KYC (RUNT, SIMIT y antecedentes).
+- [LoGiK](https://ankoradev.io/logik): Bolsa de empleo del transporte de carga en Colombia, con papeles revisados (RUNT, SIMIT y antecedentes). App en Google Play: https://play.google.com/store/apps/details?id=com.ankora.logik
 
 ## Legales
 
