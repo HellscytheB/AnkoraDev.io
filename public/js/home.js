@@ -404,7 +404,6 @@
       }
       var text = 'Hola AnkoraDev, soy ' + nombre + '.\nContacto: ' + email + '\n\n' + mensaje;
       if (statusEl) statusEl.textContent = 'Abriendo WhatsApp…';
-      if (window.plausible) window.plausible('Contacto', { props: { pagina: location.pathname } });
       window.open('https://wa.me/573151029805?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   }
