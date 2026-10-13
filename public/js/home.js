@@ -2,6 +2,13 @@
 (function () {
   'use strict';
 
+  // Si el respaldo CSS (2.5 s) ya mostró el contenido, no volver a ocultarlo
+  var lateStart = window.performance && performance.now() > 2400;
+  if (lateStart) {
+    document.querySelectorAll('.reveal, .split').forEach(function (el) { el.classList.add('in'); });
+  }
+  document.documentElement.classList.add('js-ready');
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
@@ -45,7 +52,7 @@
 
   /* ---------- 2. Revelado al hacer scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .split');
-  if ('IntersectionObserver' in window && !reduceMotion) {
+  if ('IntersectionObserver' in window && !reduceMotion && !lateStart) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
@@ -61,15 +68,17 @@
 
   /* ---------- 3. Contadores animados ---------- */
   function animateCount(el) {
-    var target = parseFloat(el.getAttribute('data-count')) || 0;
+    var raw = el.getAttribute('data-count') || '0';
+    var target = parseFloat(raw) || 0;
+    var decimals = (raw.split('.')[1] || '').length;
     var suffix = el.getAttribute('data-suffix') || '';
-    if (reduceMotion) { el.textContent = target + suffix; return; }
+    if (reduceMotion) { el.textContent = target.toFixed(decimals) + suffix; return; }
     var dur = 1800, start = null;
     function step(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 4);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -395,6 +404,7 @@
       }
       var text = 'Hola AnkoraDev, soy ' + nombre + '.\nContacto: ' + email + '\n\n' + mensaje;
       if (statusEl) statusEl.textContent = 'Abriendo WhatsApp…';
+      if (window.plausible) window.plausible('Contacto', { props: { pagina: location.pathname } });
       window.open('https://wa.me/573151029805?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   }
@@ -411,21 +421,4 @@
     p.innerHTML = 'Responsable del tratamiento en este sitio: <strong>AnkoraDev</strong> (Colombia). Canal de habeas data: <a href="mailto:contacto@ankoradev.io?subject=Habeas%20Data">contacto@ankoradev.io</a>. Respondemos en máximo 10 días hábiles. También puedes acudir a la Superintendencia de Industria y Comercio.';
     wrap.appendChild(p);
   });
-
-  /* ---------- 14. Aviso de cookies técnicas ---------- */
-  var cookieKey = 'ankora-aviso-cookies';
-  try {
-    if (!localStorage.getItem(cookieKey)) {
-      var bar = document.createElement('div');
-      bar.className = 'cookie-bar';
-      bar.setAttribute('role', 'dialog');
-      bar.setAttribute('aria-label', 'Aviso de cookies');
-      bar.innerHTML = '<p>Este sitio solo usa almacenamiento técnico para recordar que cerraste este aviso. No usamos cookies de analítica ni de publicidad. <a href="/politica_cookies">Política de cookies</a>.</p><button type="button" class="btn btn-primary" data-cookie-ok>Entendido</button>';
-      document.body.appendChild(bar);
-      bar.querySelector('[data-cookie-ok]').addEventListener('click', function () {
-        localStorage.setItem(cookieKey, '1');
-        bar.remove();
-      });
-    }
-  } catch (err) { /* almacenamiento bloqueado: el aviso se puede ignorar */ }
 })();
