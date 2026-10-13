@@ -1609,6 +1609,14 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
 
 .js .split.in .w > span { transform: none; opacity: 1; }
 
+/* Respaldo: si home.js no carga, el contenido aparece igual a los 2.5 s */
+.js:not(.js-ready) .reveal,
+.js:not(.js-ready) .split .w > span {
+  animation: ankora-failsafe 0s 2.5s forwards;
+}
+
+@keyframes ankora-failsafe { to { opacity: 1; transform: none; } }
+
 /* =========================================================
    Responsive
    ========================================================= */
@@ -1635,8 +1643,7 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
 @media (max-width: 960px) {
   body.nav-open { overflow: hidden; }
   body.nav-open .nav-wrap { z-index: 80; }
-  body.nav-open .wa-float,
-  body.nav-open .cookie-bar { visibility: hidden; pointer-events: none; }
+  body.nav-open .wa-float { visibility: hidden; pointer-events: none; }
 
   body.nav-open::before {
     content: "";
@@ -1786,35 +1793,6 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
   color: var(--glow);
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-
-/* ---------- Aviso de cookies ---------- */
-.cookie-bar {
-  position: fixed;
-  left: 16px;
-  bottom: calc(16px + env(safe-area-inset-bottom));
-  z-index: 70;
-  width: min(440px, calc(100% - 32px));
-  padding: 16px 16px 14px;
-  border-radius: 18px;
-  background: #12161e;
-  border: 1px solid rgba(255, 255, 255, .12);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .5);
-}
-
-.cookie-bar p {
-  margin: 0 0 12px;
-  font-size: .88rem;
-  line-height: 1.5;
-  color: #c5ced8;
-}
-
-.cookie-bar a { color: var(--glow); text-decoration: underline; text-underline-offset: 2px; }
-
-.cookie-bar .btn { height: 40px; padding: 0 16px; font-size: .88rem; }
-
-@media (max-width: 600px) {
-  .cookie-bar { bottom: calc(84px + env(safe-area-inset-bottom)); }
 }
 
 /* ---------- Páginas legales cortas ---------- */
