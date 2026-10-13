@@ -1080,6 +1080,38 @@ main, .footer, .nav-wrap { position: relative; z-index: 2; }
 
 .step p { color: var(--muted); margin: 0; font-size: .96rem; }
 
+/* ---------- PRECIOS ---------- */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 20px;
+}
+.price-card { position: relative; padding: 30px 26px; display: flex; flex-direction: column; }
+.price-card h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -.02em; margin: 0 0 4px; }
+.price-who { color: var(--muted); font-size: .92rem; margin: 0 0 18px; }
+.price-amount { font-size: 2.2rem; font-weight: 700; letter-spacing: -.03em; margin: 0 0 22px; color: var(--ink); }
+.price-amount span { font-size: .95rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.price-card .checks { margin: 0; }
+.price-featured { box-shadow: 0 0 0 1px rgba(52, 211, 153, .45) inset, 0 20px 50px -20px rgba(52, 211, 153, .35); }
+.price-badge {
+  position: absolute; top: 18px; right: 18px;
+  padding: 4px 10px; border-radius: 999px;
+  font-size: .72rem; font-weight: 600;
+  color: var(--glow); background: rgba(52, 211, 153, .12); border: 1px solid rgba(52, 211, 153, .3);
+}
+.price-more {
+  margin-top: 20px; padding: 28px 30px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+}
+.price-more > div { flex: 1 1 420px; min-width: 0; }
+.price-more h3 { font-size: 1.15rem; font-weight: 600; margin: 0 0 10px; }
+.price-more p { color: var(--muted); margin: 0 0 10px; font-size: .95rem; }
+.price-more p:last-child { margin-bottom: 0; }
+.price-more strong { color: var(--ink); font-weight: 600; }
+.price-list { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 8px; }
+.price-list li { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; padding-bottom: 8px; border-bottom: 1px solid var(--line-2); color: var(--muted); font-size: .95rem; }
+.price-list li strong { white-space: nowrap; }
+
 /* ---------- BENTO ---------- */
 .bento {
   display: grid;
